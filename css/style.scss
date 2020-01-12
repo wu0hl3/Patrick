@@ -1,0 +1,727 @@
+$gold:#816E4A;
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &::selection {
+        background: $gold;
+        color: white;
+    }
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+    .mask_bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1001;
+    }
+
+    .pic_container {
+        width: auto;
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1002;
+
+        .pic {
+            width: 100%;
+            box-shadow: 0 0 5px $gold;
+
+            .content_pic_inner {
+                width: 100%;
+
+                .env {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1001;
+        color: $gold;
+        font-size: 5rem;
+        font-weight: 700;
+        font-family: sans-serif;
+        cursor: pointer;
+        -webkit-text-stroke: silver 2px;
+    }
+
+    .pre_btn,
+    .next_btn {
+        position: absolute;
+        top: 50%;
+        opacity: .3;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    .pre_btn {
+        left: -100px;
+    }
+
+    .next_btn {
+        right: -100px;
+    }
+}
+
+.mask_show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#all {
+    display: flex;
+    width: auto;
+}
+
+
+
+header {
+    width: 23.6076%;
+    height: 100vh;
+    background-color: rgb(13, 12, 8);
+
+    #logo {
+        height: 30%;
+    }
+
+    nav {
+
+        height: auto;
+
+        .nav_container {
+            width: 61.8%;
+            height: 100%;
+            margin: auto;
+
+            .swiper-pagination {
+                position: static;
+                width: 100%;
+                height: 100%;
+
+                span+span {
+                    border-top: 1px white solid;
+                }
+
+                .swiper-pagination-bullet {
+                    border-radius: unset;
+                    background: transparent;
+                    display: block;
+                    height: auto;
+                    width: 100%;
+                    opacity: unset;
+                    transition: 3s;
+                    text-align: right;
+
+                    &::before {
+                        color: white;
+                        font-size: 5rem;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        height: 8rem;
+                        font-family: "Reenie Beanie", cursive;
+                        transition: 1.5s;
+                    }
+
+                    &:nth-child(1) {
+                        &::before {
+                            content: 'Brand';
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::before {
+                            content: 'Menu';
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            content: 'Environment';
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        &::before {
+                            content: 'Chef';
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        &::before {
+                            content: 'News';
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        &::before {
+                            content: 'Contact Us';
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                .swiper-pagination-bullet-active {
+                    &::before {
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 76.3924%;
+    height: 100vh;
+    overflow: hidden;
+
+    .section_group {
+        width: 733px;
+        position: absolute;
+        height: 100%;
+        z-index: 999;
+        transition: 1s;
+
+
+        .swiper_container_section_group {
+            height: 100vh;
+            width: 100%;
+
+
+            .toggle_btn {
+                position: fixed;
+                z-index: 1000;
+                top: 30%;
+                left: calc(23.6076% + 733px);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                background: linear-gradient(90deg, transparent 0, transparent 50%, #310c0e 50%, #310c0e 100%);
+
+                transition: 1s;
+                transform: translateX(-50%);
+
+
+
+                img {
+                    margin-left: auto;
+                    margin-right: 5px;
+                    width: 30%;
+
+                    transition: 1s;
+                    transform: rotate(180deg);
+                }
+
+                .arrow_trigger {
+                    transform: rotate(360deg) !important;
+                }
+            }
+
+            .toggle_btn_tirgger {
+                left: 23.6076% !important;
+            }
+
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+
+                section {
+                    background-color: rgba(255, 255, 255, 0.9);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .sectionInner {
+                        height: 90%;
+                        width: 90%;
+                        border: 1px solid $gold;
+
+                        .title {
+                            width: 100%;
+                            height: 36.89%;
+                            text-align: center;
+
+                            .title_container {
+                                margin: auto;
+                                height: 80.9%;
+                                width: 68.67%;
+                                border-bottom: 1px solid $gold;
+                                position: relative;
+
+                                h2 {
+
+                                    color: $gold;
+                                    display: inline;
+                                    margin: 0;
+                                    position: absolute;
+                                    top: 76.86%;
+                                    left: 50%;
+                                    font-size: 6.2rem;
+                                    font-family: 'Cambria';
+                                    font-style: italic;
+                                    transform: translate(-50%, -100%);
+
+                                }
+                            }
+                        }
+
+                        .content {
+                            width: 68.67%;
+                            height: 63.11%;
+                            margin: auto;
+
+                            h3 {
+                                font-size: 2.5rem;
+                                font-size: 2rem;
+                                font-family: "微軟正黑體";
+                                text-align: justify;
+                                color: $gold;
+                            }
+
+                            p {
+                                font-size: 2rem;
+                                line-height: 4rem;
+                                font-family: "微軟正黑體";
+                                text-align: justify;
+                                color: $gold;
+                                margin-bottom: 0;
+                                position: relative;
+                            }
+
+
+                            span {
+                                margin: 4px;
+                                font-family: "Reenie Beanie", cursive !important;
+                            }
+
+                            hr {
+                                background-color: $gold;
+                            }
+                        }
+                    }
+
+                    .sectionInner_trigger {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_group_trigger {
+        width: 0;
+    }
+}
+
+#Menu {
+    .title {
+        margin-bottom: -8%;
+    }
+
+    .content {
+        width: 100%;
+        height: 67%;
+
+        .menu_swiper_container {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                h3 {
+                    text-align: center;
+                    font-size: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+
+
+
+                .item {
+                    font-weight: 600;
+                    font-family: "微軟正黑體" !important;
+                    margin-top: .5rem;
+
+                    span {
+                        font-weight: 1000;
+                    }
+                }
+
+                .note {
+                    font-weight: 1000;
+                    font-size: .8rem;
+                    position: absolute;
+                    bottom: .2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+#Environment {
+    .content {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .content_pic {
+            width: 33%;
+            height: 120px;
+            margin-bottom: 15px;
+
+            .content_pic_inner {
+                width: 90%;
+                height: 100px;
+                margin: auto;
+                border: 1px solid $gold;
+
+                .env {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        &:hover {
+                            border: 2px $gold solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Chef {
+
+    .title {
+        margin-bottom: -140px;
+
+        .title_container {
+            height: 50%;
+        }
+    }
+
+    .decoration {
+        border: $gold .5px solid;
+        height: 0%;
+        width: 68.67%;
+        margin: 20px auto;
+        position: relative;
+        top: -5px;
+    }
+
+    .content {
+        width: calc(68.67% - 40px);
+        padding-left: 40px;
+        height: auto;
+
+        h3 {
+            font-size: 2.3rem;
+            position: relative;
+
+            span.chef_name {
+                font-size: 2.5rem;
+                font-family: "微軟正黑體" !important;
+                margin: 0 !important;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+
+        .level1 {
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .level2 {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .level3 {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px !important;
+        }
+
+        .time_line::before {
+            color: $gold;
+            position: absolute;
+            left: -40px;
+            font-size: 2rem;
+            font-family: "Reenie Beanie", cursive;
+        }
+
+        .year_2000::before {
+            content: '2000';
+        }
+
+        .year_2006::before {
+            content: '2006';
+        }
+
+        .year_2006To2008::before {
+            content: '2006';
+            top: 1rem;
+        }
+
+        .year_2006To2008::after {
+            content: '2008';
+            color: $gold;
+            position: absolute;
+            left: -40px;
+            bottom: 1rem;
+            font-size: 2rem;
+            font-family: "Reenie Beanie", cursive;
+        }
+
+        .year_2009::before {
+            content: '2009';
+        }
+
+        .content_top {
+            position: relative;
+
+            &::before {
+                content: '';
+                border: 1px solid $gold;
+                background: $gold;
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                position: absolute;
+                left: -30px;
+                top: 10px;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 85%;
+                background: $gold;
+                position: absolute;
+                left: -27.5px;
+                top: 25px;
+            }
+
+            &:nth-child(1) {
+                &::after {
+                    top: 18px;
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+#News {
+    .content {
+        position: relative;
+
+        .news_index {
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+
+            p {
+                font-size: 1.4rem;
+                line-height: 3rem;
+                border-bottom: dashed 1px $gold;
+                cursor: pointer;
+            }
+
+            .time {
+                font-family: "Reenie Beanie", cursive;
+            }
+        }
+
+
+        .news_details {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            height: auto;
+            transition: .5s;
+            opacity: 0;
+            pointer-events: none;
+
+            p {
+                font-size: 2.5rem;
+            }
+
+            .time {
+                color: $gold;
+                font-size: 3rem;
+                font-family: "Reenie Beanie", cursive;
+            }
+
+            .back {
+                position: absolute;
+                right: 0;
+                bottom: -1rem;
+                cursor: pointer;
+                opacity: 1;
+                animation: backAnimation 2s ease-in-out 0s infinite alternate both;
+                
+animation-play-state:running;
+                &:hover{
+                    animation-play-state:paused;
+                }
+
+                svg {
+                    fill: $gold !important;
+                }
+            }
+        }
+    }
+}
+
+@keyframes backAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#ContactUs {
+    h2 {
+        width: 300px;
+    }
+
+    .content {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            line-height: 5rem;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    .banner_swiper_container {
+        width: 100%;
+        height: 100%;
+
+        .banner_tmp {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background-image: url('/image/environment/en1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: 1s;
+        }
+
+
+        .banner_tmp_chef {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background-image: url(/image/chef/chef.jpg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: 1s;
+        }
+
+
+        .banner_swiper_wrapper {
+            width: 100%;
+            height: 100%;
+
+            .banner_swiper_slide {
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}
