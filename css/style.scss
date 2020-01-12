@@ -638,10 +638,11 @@ main {
                 cursor: pointer;
                 opacity: 1;
                 animation: backAnimation 2s ease-in-out 0s infinite alternate both;
-                
-animation-play-state:running;
-                &:hover{
-                    animation-play-state:paused;
+
+                animation-play-state: running;
+
+                &:hover {
+                    animation-play-state: paused;
                 }
 
                 svg {
@@ -696,7 +697,7 @@ animation-play-state:running;
             width: 100%;
             height: 100%;
             z-index: 100;
-            background-image: url('/image/environment/en1.jpg');
+            background-image: url(../image/environment/en1.jpg);
             background-size: cover;
             background-position: center;
             opacity: 0;
@@ -706,10 +707,12 @@ animation-play-state:running;
 
         .banner_tmp_chef {
             position: fixed;
+            right: 0;
+            top: 0;
             width: 100%;
             height: 100%;
             z-index: 100;
-            background-image: url(/image/chef/chef.jpg);
+            background-image: url(../image/chef/chef.jpg);
             background-size: cover;
             background-position: center;
             opacity: 0;
