@@ -136,6 +136,7 @@ header {
   width: 23.6076%;
   height: 100vh;
   background-color: #0d0c08;
+  z-index: 101;
 }
 
 header #logo {
@@ -716,6 +717,8 @@ main .section_group_trigger {
 
 .banner .banner_swiper_container .banner_tmp {
   position: fixed;
+  right: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
