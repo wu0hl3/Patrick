@@ -454,12 +454,6 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .line {
   margin: 1rem auto;
 }
 
-@media (min-height: 1081px) {
-  main .sections .section_swiper_wrapper .section_swiper_slide section .line {
-    margin: 4rem auto !important;
-  }
-}
-
 main .sections .section_swiper_wrapper .section_swiper_slide section .content {
   width: 68.67%;
   height: 70%;
@@ -493,6 +487,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 60%;
   margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -556,6 +551,10 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   white-space: nowrap;
 }
 
+#Environment .line {
+  margin-bottom: 6rem;
+}
+
 #Environment .content {
   margin-top: 2rem;
   width: 80%;
@@ -611,6 +610,18 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   margin: 1rem auto;
 }
 
+@media (min-height: 900px) {
+  #Chef .line {
+    margin: 1.8rem auto !important;
+  }
+}
+
+@media (min-height: 1000px) {
+  #Chef .line {
+    margin: 2.5rem auto !important;
+  }
+}
+
 #Chef .content {
   margin: auto;
   padding-left: 40px;
@@ -659,7 +670,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   position: absolute;
   left: -40px;
   font-size: 2rem;
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie", "微軟正黑體";
 }
 
 #Chef .content .year_2000::before {
@@ -760,7 +771,9 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 }
 
 #News .content .news_index .time {
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Reenie Beanie","微軟正黑體";
+  font-size: 2.5rem;
+  margin-left: .8rem;
 }
 
 #News .content .news_details {

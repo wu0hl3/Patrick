@@ -361,9 +361,7 @@ main {
 						background-color: $gold;
 						margin: 1rem auto;
 
-						@media (min-height:1081px) {
-							margin: 4rem auto !important;
-						}
+						
 					}
 
 					.content {
@@ -404,6 +402,7 @@ main {
 #Brand {
 	.content {
 		display: flex;
+		height: 60%;
 		margin: auto;
 		justify-content: center;
 		align-items: center;
@@ -468,6 +467,9 @@ main {
 }
 
 #Environment {
+	.line{
+		margin-bottom: 6rem;
+	}
 	.content {
 		margin-top: 2rem;
 		width: 80%;
@@ -516,6 +518,12 @@ main {
 
 	.line {
 		margin: 1rem auto;
+		@media (min-height:900px) {
+			margin: 1.8rem auto !important;
+		}
+		@media (min-height:1000px) {
+			margin: 2.5rem auto !important;
+		}
 	}
 
 	.content {
@@ -565,7 +573,7 @@ main {
 			position: absolute;
 			left: -40px;
 			font-size: 2rem;
-			font-family: "Reenie Beanie", cursive;
+			font-family: "Reenie Beanie", "微軟正黑體";
 		}
 
 		.year_2000::before {
@@ -664,7 +672,9 @@ main {
 			}
 
 			.time {
-				font-family: "Reenie Beanie", cursive;
+				font-family: "Reenie Beanie","微軟正黑體";
+				font-size: 2.5rem;
+				margin-left: .8rem;
 			}
 		}
 
