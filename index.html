@@ -35,7 +35,13 @@
         <header>
             <div id="logo"></div>
             <nav>
-                <ul>
+                <div class="mobile_menu">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nav_index"></div>
+                <ul class="nav_list">
                     <li class="Brand active"><svg viewbox="0 0 100 100">
                             <text x="0" y="80">LA'</text>
                         </svg><a>Brand</a></li>
@@ -153,17 +159,17 @@
                 <div class="banner_env"></div>
                 <div class="swiper-container banner_swiper_container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner1.jpg');">Slide 1
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner1.jpg');">
                         </div>
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner2.jpg');">Slide 2
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner2.jpg');">
                         </div>
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner3.jpg');">Slide 3
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner3.jpg');">
                         </div>
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner4.webp');">Slide 4
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner4.webp');">
                         </div>
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner5.webp');">Slide 5
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner5.webp');">
                         </div>
-                        <div class="swiper-slide" style="background-image: url('./image/banner/banner6.webp');">Slide 6
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner6.webp');">
                         </div>
                     </div>
                 </div>
@@ -731,6 +737,23 @@
                     banner_swiper_container.style.pointerEvents = "all"
                 }
             }
+        }
+        {
+            let mobile_menu = document.querySelector('.mobile_menu');
+            let nav_list = document.querySelector('.nav_list');
+            let header = document.querySelector('header');
+            let top = document.querySelector('.top');
+            let middle = document.querySelector('.middle');
+            let bottom = document.querySelector('.bottom');
+            mobile_menu.addEventListener("click",()=>{
+                nav_list.classList.toggle('nav_list_show');
+                header.classList.toggle('header_show');
+                top.classList.toggle('rotate45');
+                middle.classList.toggle('hide');
+                bottom.classList.toggle('rotateM45');
+            })
+            
+
         }
     </script>
 </body>
