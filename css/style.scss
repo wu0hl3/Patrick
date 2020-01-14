@@ -1,4 +1,5 @@
 $gold: #816e4a;
+$wineRed: #310c0e;
 
 html {
 	font-size: 62.5%;
@@ -214,7 +215,7 @@ header {
 		@media (max-width:767px) {
 			width: 100%;
 			height: 50px;
-			background-color: $gold;
+			background-color: $wineRed;
 		}
 
 		.mobile_menu {
@@ -302,7 +303,7 @@ header {
 
 			@media (max-width:767px) {
 				position: absolute;
-				background-color: $gold;
+				background-color: $wineRed;
 				top: 50px;
 				height: calc(100% - 50px);
 				opacity: 0;
