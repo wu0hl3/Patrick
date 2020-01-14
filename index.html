@@ -14,20 +14,24 @@
 <body>
     <div id="all">
         <div class="mask">
+            <div class="mask_container_bg" onclick="closeModel()"></div>
             <div class="mask_container">
+                <div class="prev" onclick="pre()"></div>
+                <div class="next" onclick="next()"></div>
+
                 <div class="close_btn">x</div>
                 <div class="pre_btn" style="width: 50px;height: 50px;">
                     <svg width="100%" viewbox="0 0 150 100" transform="rotate(180)" ;>
-                        <path d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
-                        <path d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
-                        <path d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
+                        <path class="first" d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
+                        <path class="second" d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
+                        <path class="third" d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
                     </svg>
                 </div>
                 <div class="next_btn" style="width: 50px;height: 50px;">
                     <svg width="100%" viewbox="0 0 150 100">
-                        <path d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
-                        <path d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
-                        <path d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
+                        <path class="first" d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
+                        <path class="second" d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
+                        <path class="third" d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
                     </svg>
                 </div>
             </div>
@@ -396,7 +400,7 @@
                                     赴美，在<span>Boston</span>的<span>NESE</span>語言學校短期遊學，在一堂作文課中，老師<span>MaryT.</span>
                                     出了一道作文題目：若你可以放棄目前的工作，你最想做的是什麼？就像一道霹靂，<span>Patrick</span>終於寫道：開一家屬於自己風格的餐廳</p>
                             </div>
-                            <div class="line"></div>
+                            <div class="line line2"></div>
                             <div class="content">
                                 <p class="year_2000 time_line level3">
                                     返台後，一方面積極遊說家人，要放棄十餘年的公務員生涯，另一方面利用下班及放假，遠赴台北及各地學習烘焙、中、西餐、調酒…
@@ -634,6 +638,8 @@
             const banner_chef = document.querySelector('.banner_chef');
             const banner_env = document.querySelector('.banner_env');
             let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
+            let nav_index = document.querySelector('.nav_index');
+            nav_index.innerHTML = 'Brand';
 
             var banner_env_5s;
 
@@ -656,12 +662,9 @@
 
             function navCheck(entries) {
                 for (let i = 0; i < entries.length; i++) {
-                    if (entries[i].intersectionRatio>.8) {
-                         x = entries[i].target.getAttribute('data-index');
+                    if (entries[i].intersectionRatio > .8) {
+                        x = entries[i].target.getAttribute('data-index');
                     }
-                   
-                    // console.log(entries[i].target.getAttribute('data-index'))
-                    console.log(x);
                 }
 
                 if (x == 2) {
@@ -691,6 +694,26 @@
                 navche();
                 initial();
                 first = false;
+                switch (x) {
+                    case '0':
+                    nav_index.innerHTML = 'Brand';
+                        break;
+                    case '1':
+                    nav_index.innerHTML = 'Menu';
+                        break;
+                    case '2':
+                    nav_index.innerHTML = 'Environment';
+                        break;
+                    case '3':
+                    nav_index.innerHTML = 'Chef';
+                        break;
+                    case '4':
+                    nav_index.innerHTML = 'News';
+                        break;
+                    case '5':
+                    nav_index.innerHTML = 'Contact us';
+                        break;
+                }
             }
 
 
@@ -715,8 +738,9 @@
 
             function bannerEnv5s(i) {
                 banner_env_5s = window.setInterval(() => {
+
                     banner_env.style.backgroundImage = `url(${envPics[i].src})`;
-                    if (i >= envPics.length - 1) {
+                    if (i == envPics.length - 1) {
                         i = 0;
                     } else {
                         i++;
@@ -783,6 +807,10 @@
                 top.classList.toggle('rotate45');
                 middle.classList.toggle('hide');
                 bottom.classList.toggle('rotateM45');
+            })
+
+            nav_list.addEventListener('click', () => {
+                mobile_menu.click();
             })
 
 
