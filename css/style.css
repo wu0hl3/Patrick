@@ -91,7 +91,7 @@ html {
 .mask .mask_container .next_btn {
   position: absolute;
   top: 50%;
-  opacity: .3;
+  opacity: .7;
 }
 
 .mask .mask_container .pre_btn:hover,
