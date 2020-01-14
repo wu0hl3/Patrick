@@ -673,6 +673,10 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
           align-items: center;
 }
 
+#Brand .content p span {
+  font-size: 3rem;
+}
+
 @media (max-width: 425px) {
   #Brand .content p {
     font-size: 3rem;

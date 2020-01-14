@@ -557,6 +557,9 @@ main {
 		justify-content: center;
 		align-items: center;
 		p{
+			span{
+				font-size: 3rem;
+			}
 			@media (max-width:425px){
 				font-size: 3rem;
 			}
