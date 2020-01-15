@@ -43,11 +43,11 @@ html {
 	text-align: center;
 	background: $wineRed;
 	overflow: hidden;
-	animation-name:toTransparent;
-	animation-delay: 3s;
-	animation-duration:2s;
-	animation-fill-mode:forwards;
-	transition: 1s;
+	// animation-name:toTransparent;
+	// animation-delay: 3s;
+	// animation-duration:2s;
+	// animation-fill-mode:forwards;
+	transition: 2s;
 
 	h1 {
 		font-family: 'Noto Sans TC', sans-serif;
@@ -76,14 +76,20 @@ html {
 	}
 }
 
-@keyframes toTransparent{
-0%{
-opacity: 1;
-}
-100%{
+.animation_hide {
 	opacity: 0;
 	pointer-events: none;
 }
+
+@keyframes toTransparent {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		pointer-events: none;
+	}
 }
 
 

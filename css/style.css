@@ -50,16 +50,8 @@ html {
   text-align: center;
   background: #310c0e;
   overflow: hidden;
-  -webkit-animation-name: toTransparent;
-          animation-name: toTransparent;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 2s;
+  transition: 3s 3s;
 }
 
 .animation h1 {
@@ -92,6 +84,11 @@ html {
   .animation h1 {
     font-size: 30px;
   }
+}
+
+.animation_hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @-webkit-keyframes toTransparent {
@@ -187,7 +184,18 @@ html {
 }
 
 .mask .mask_container .close_btn:hover {
-  text-shadow: 0px 0px 5px silver, 0px -1px 5px silver, 0px -2px 5px silver,  0px 0px 5px silver, 0px 1px 5px silver, 0px 2px 5px silver,  0px 0px 5px silver, -1px 0px 5px silver, -2px 0px 5px silver,  0px 0px 5px silver, 1px 0px 5px silver, 2px 0px 5px silver;
+  text-shadow: 0px 0px 5px silver,
+ 0px -1px 5px silver,
+ 0px -2px 5px silver,
+  0px 0px 5px silver,
+ 0px 1px 5px silver,
+ 0px 2px 5px silver,
+  0px 0px 5px silver,
+ -1px 0px 5px silver,
+ -2px 0px 5px silver,
+  0px 0px 5px silver,
+ 1px 0px 5px silver,
+ 2px 0px 5px silver;
 }
 
 .mask .mask_container .pre_btn,
