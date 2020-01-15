@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L'Atelier de Patrick</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="all">
+        <div class="animation">
+            <h1 class="ml12">L'Atelier de Patrick</h1>
+        </div>
+
+        <div class="mask">
+            <div class="mask_container_bg" onclick="closeModel()"></div>
+            <div class="mask_container">
+                <div class="prev" onclick="pre()"></div>
+                <div class="next" onclick="next()"></div>
+
+                <div class="close_btn">x</div>
+                <div class="pre_btn" style="width: 50px;height: 50px;">
+                    <svg width="100%" viewbox="0 0 150 100" transform="rotate(180)" ;>
+                        <path class="first" d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
+                        <path class="second" d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
+                        <path class="third" d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
+                    </svg>
+                </div>
+                <div class="next_btn" style="width: 50px;height: 50px;">
+                    <svg width="100%" viewbox="0 0 150 100">
+                        <path class="first" d="M 0 0 L50 50 L 0 100 Z" style="fill: #816e4a;opacity:.6" />
+                        <path class="second" d="M 50 0 L100 50 L 50 100 Z" style="fill: #816e4a;opacity:.8" />
+                        <path class="third" d="M 100 0 L150 50 L 100 100 Z" style="fill: #816e4a" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div id="logo"></div>
+            <nav>
+                <div class="mobile_menu">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="nav_index"></div>
+                <ul class="nav_list">
+                    <li class="Brand active"><svg viewbox="0 0 100 100">
+                            <text x="0" y="80">LA'</text>
+                        </svg><a>Brand</a></li>
+                    <li class="Menu "><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.014 492.014"
+                            style="enable-background:new 0 0 492.014 492.014;" xml:space="preserve">
+                            <g id="XMLID_144_">
+                                <path id="XMLID_151_" d="M339.277,459.566H34.922V32.446h304.354v105.873l32.446-32.447V16.223C371.723,7.264,364.458,0,355.5,0
+                                H18.699C9.739,0,2.473,7.264,2.473,16.223v459.568c0,8.959,7.265,16.223,16.226,16.223H355.5c8.958,0,16.223-7.264,16.223-16.223
+                                V297.268l-32.446,32.447V459.566z" />
+                                <path id="XMLID_150_" d="M291.446,71.359H82.751c-6.843,0-12.396,5.553-12.396,12.398c0,6.844,5.553,12.397,12.396,12.397h208.694
+                                c6.845,0,12.397-5.553,12.397-12.397C303.843,76.912,298.29,71.359,291.446,71.359z" />
+                                <path id="XMLID_149_"
+                                    d="M303.843,149.876c0-6.844-5.553-12.398-12.397-12.398H82.751c-6.843,0-12.396,5.554-12.396,12.398
+                                c0,6.845,5.553,12.398,12.396,12.398h208.694C298.29,162.274,303.843,156.722,303.843,149.876z" />
+                                <path id="XMLID_148_" d="M274.004,203.6H82.751c-6.843,0-12.396,5.554-12.396,12.398c0,6.845,5.553,12.397,12.396,12.397h166.457
+                                L274.004,203.6z" />
+                                <path id="XMLID_147_" d="M204.655,285.79c1.678-5.618,4.076-11.001,6.997-16.07h-128.9c-6.843,0-12.396,5.553-12.396,12.398
+                                c0,6.844,5.553,12.398,12.396,12.398h119.304L204.655,285.79z" />
+                                <path id="XMLID_146_" d="M82.751,335.842c-6.843,0-12.396,5.553-12.396,12.398c0,6.843,5.553,12.397,12.396,12.397h108.9
+                                c-3.213-7.796-4.044-16.409-1.775-24.795H82.751z" />
+                                <path id="XMLID_145_"
+                                    d="M479.403,93.903c-6.496-6.499-15.304-10.146-24.48-10.146c-9.176,0-17.982,3.647-24.471,10.138
+                                L247.036,277.316c-5.005,5.003-8.676,11.162-10.703,17.942l-14.616,48.994c-0.622,2.074-0.057,4.318,1.477,5.852
+                                c1.122,1.123,2.624,1.727,4.164,1.727c0.558,0,1.13-0.08,1.688-0.249l48.991-14.618c6.782-2.026,12.941-5.699,17.943-10.702
+                                l183.422-183.414c6.489-6.49,10.138-15.295,10.138-24.472C489.54,109.197,485.892,100.392,479.403,93.903z" />
+                            </g>
+                        </svg><a>Menu</a></li>
+                    <li class="Environment "><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512"
+                            viewBox="0 0 512 512">
+
+                            <path
+                                d="M272.978 198.031v151.040c10.404 6.195 16.978 17.5 16.978 30.536 0 19.784-14.797 35.062-33.966 35.062-18.626 0-33.966-15.278-33.966-35.062 0-13.036 6.595-24.341 16.988-30.536v-151.040c6.031 0.542 12.053 0.542 18.074 0.542 5.478 0 10.957 0 15.892-0.542v0zM256 38.175c134.226 0 243.2 31.662 243.2 70.185 0 38.983-108.984 70.144-243.2 70.144-134.195 0-243.2-31.16-243.2-70.144 0-38.533 108.995-70.185 243.2-70.185v0zM290.498 413.286c-4.915 9.615-18.616 22.62-34.509 22.62-15.872 0-29.573-13.005-34.499-22.62-79.422 4.516-139.131 30.003-139.131 57.139 0 1.116 0 2.263 0.543 3.399h346.194c0.522-1.137 0.522-2.284 0.522-3.399 0-27.136-59.699-52.613-139.12-57.139z"
+                                fill="#000000" />
+                        </svg><a>Environment</a></li>
+                    <li class="Chef "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" id="Capa_1" x="0px" y="0px" width="45.001px" height="45.001px"
+                            viewBox="0 0 45.001 45.001" style="enable-background:new 0 0 45.001 45.001;"
+                            xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M40.356,42.087l-1.125-5.896c-0.281-1.479-1.791-2.937-3.359-3.242l-6.471-1.271L28.3,29.421   c-0.052-0.107-0.148-0.189-0.264-0.227c-0.104-0.031-0.295-0.006-0.322-0.021c-0.004-0.096-0.008-0.192-0.01-0.289   c0.355-0.62,0.633-1.305,0.814-2.002c0.168-0.075,0.347-0.202,0.519-0.403c0.161-0.188,0.293-0.394,0.392-0.607   c0.125-0.273,0.235-0.555,0.32-0.842l0.072-0.242c0.113-0.395,0.224-0.787,0.4-1.162c0.315-0.666,0.273-1.35,0.201-1.873   c-0.055-0.398-0.219-0.7-0.492-0.909c0.149-0.577,0.266-1.215,0.334-1.884h0.234v-6.4c0.188,0.024,0.376,0.058,0.572,0.058   c2.412,0,4.369-1.958,4.369-4.371c0-2.415-1.957-4.372-4.369-4.372c-0.84,0-1.613,0.248-2.277,0.656   c-0.921-2.603-3.374-4.471-6.275-4.527V0.001c-0.004,0-0.013,0-0.019,0.001C22.493,0.002,22.485,0,22.479,0v0.004   c-2.902,0.058-5.354,1.927-6.275,4.527c-0.665-0.409-1.439-0.656-2.277-0.656c-2.414,0-4.371,1.958-4.371,4.372   s1.959,4.371,4.371,4.371c0.195,0,0.383-0.033,0.572-0.059v6.401h0.234c0.068,0.669,0.186,1.308,0.334,1.884   c-0.273,0.209-0.438,0.512-0.492,0.909c-0.072,0.522-0.114,1.207,0.201,1.872c0.178,0.375,0.287,0.77,0.402,1.164l0.071,0.242   c0.085,0.287,0.196,0.566,0.321,0.842c0.098,0.213,0.229,0.418,0.391,0.605c0.171,0.203,0.35,0.33,0.518,0.403   c0.184,0.699,0.459,1.382,0.815,2.002c-0.002,0.104-0.006,0.203-0.01,0.306c-0.185,0.002-0.315,0.002-0.321,0.006   c-0.115,0.035-0.211,0.117-0.264,0.225l-1.102,2.256l-6.47,1.271c-1.571,0.307-3.078,1.762-3.36,3.244l-1.125,5.896   c-0.142,0.733,0.029,1.44,0.482,1.99c0.484,0.587,1.25,0.923,2.102,0.923h30.547c0.852,0,1.615-0.336,2.103-0.922   C40.328,43.528,40.499,42.823,40.356,42.087z M17.135,40.851h-5.918v-0.926h5.918V40.851z M21.783,33.323l-0.82,1.678l-4.507-2.605   l-0.188-0.108l0.062-0.125l0.099-0.203l0.239-0.49l0.22-0.446c0.041-0.049,0.064-0.103,0.076-0.158l0.312-0.641l0.675,0.389   l0.78,0.453l0.572,0.33l0.57,0.33l0.93,0.536l1.168,0.677L21.783,33.323z M24.653,42.866c-0.373,0-0.676-0.303-0.676-0.676   c0-0.375,0.303-0.676,0.676-0.676s0.678,0.301,0.678,0.676C25.331,42.563,25.026,42.866,24.653,42.866z M24.653,40.575   c-0.373,0-0.676-0.303-0.676-0.676c0-0.375,0.303-0.678,0.676-0.678s0.678,0.305,0.678,0.678S25.026,40.575,24.653,40.575z    M24.653,38.284c-0.373,0-0.676-0.303-0.676-0.676c0-0.375,0.303-0.678,0.676-0.678s0.678,0.303,0.678,0.678   C25.331,37.979,25.026,38.284,24.653,38.284z M28.681,32.315l-0.058,0.033l-0.079,0.045l-4.507,2.607l-0.829-1.699l-0.18-0.365   l1.234-0.713l0.862-0.5l0.571-0.33l0.57-0.33l0.909-0.526l0.546-0.315l0.111,0.231l0.496,1.016l0.238,0.488l0.16,0.33   L28.681,32.315z" />
+                            </g>
+                        </svg><a>Chef</a></li>
+                    <li class="News "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" id="Capa_1" x="0px" y="0px" width="49.157px" height="49.156px"
+                            viewBox="0 0 49.157 49.156" style="enable-background:new 0 0 49.157 49.156;"
+                            xml:space="preserve">
+
+                            <polygon
+                                points="29.67,15.185 29.684,15.185 31.061,17.658 32.122,17.658 32.122,13.689 31.151,13.689 31.151,16.136      31.139,16.136 29.762,13.689 28.7,13.689 28.7,17.658 29.67,17.658    " />
+                            <polygon
+                                points="36.045,16.768 33.862,16.768 33.862,16.014 35.807,16.014 35.807,15.212 33.862,15.212 33.862,14.518      35.991,14.518 35.991,13.689 32.829,13.689 32.829,17.658 36.045,17.658    " />
+                            <polygon
+                                points="37.352,17.658 38.403,17.658 38.948,14.923 38.958,14.923 39.502,17.658 40.536,17.658 41.631,13.689      40.598,13.689 40.036,16.591 40.026,16.591 39.442,13.689 38.469,13.689 37.885,16.591 37.874,16.591 37.313,13.689      36.28,13.689    " />
+                            <path
+                                d="M43.977,16.85c-0.061,0.031-0.127,0.055-0.203,0.069c-0.076,0.015-0.154,0.022-0.232,0.022     c-0.221,0-0.398-0.045-0.531-0.134c-0.135-0.089-0.207-0.25-0.219-0.483H41.76c0,0.256,0.047,0.473,0.141,0.65     c0.096,0.177,0.221,0.324,0.381,0.439c0.16,0.114,0.342,0.198,0.547,0.25s0.424,0.077,0.654,0.077     c0.219,0,0.432-0.021,0.639-0.066c0.207-0.044,0.393-0.117,0.553-0.22c0.162-0.102,0.291-0.237,0.389-0.408     c0.098-0.17,0.146-0.382,0.146-0.634c0-0.178-0.033-0.33-0.1-0.458s-0.154-0.235-0.26-0.322c-0.107-0.087-0.23-0.159-0.367-0.217     s-0.279-0.106-0.422-0.147c-0.145-0.041-0.287-0.076-0.422-0.105c-0.139-0.029-0.262-0.063-0.371-0.101     c-0.109-0.036-0.195-0.079-0.26-0.127c-0.066-0.049-0.098-0.111-0.098-0.189c0-0.066,0.016-0.121,0.047-0.164     c0.031-0.042,0.07-0.077,0.119-0.103c0.047-0.026,0.102-0.045,0.16-0.056c0.061-0.011,0.117-0.017,0.172-0.017     c0.078,0,0.156,0.008,0.234,0.024c0.078,0.018,0.146,0.044,0.207,0.081c0.061,0.037,0.109,0.086,0.146,0.147     s0.055,0.136,0.051,0.225h1.033c0-0.222-0.045-0.414-0.139-0.575c-0.092-0.161-0.213-0.293-0.361-0.397     c-0.146-0.104-0.316-0.181-0.508-0.23c-0.191-0.049-0.385-0.075-0.582-0.075c-0.186,0-0.375,0.022-0.566,0.067     c-0.193,0.044-0.367,0.114-0.521,0.211c-0.156,0.097-0.283,0.222-0.381,0.375c-0.098,0.154-0.148,0.338-0.148,0.553     c0,0.182,0.035,0.337,0.104,0.464c0.068,0.128,0.158,0.235,0.268,0.323c0.109,0.087,0.232,0.158,0.371,0.214     s0.279,0.104,0.42,0.145c0.145,0.04,0.285,0.076,0.42,0.108c0.135,0.031,0.256,0.067,0.363,0.108     c0.107,0.04,0.195,0.089,0.26,0.145c0.064,0.055,0.098,0.127,0.098,0.216c0,0.074-0.02,0.138-0.057,0.189     C44.083,16.774,44.036,16.818,43.977,16.85z" />
+                            <path
+                                d="M43.948,20.527c-2.074,0-4.148,0-6.225,0c-0.521,0-0.521,1.805,0,1.805c2.076,0,4.148,0,6.225,0     C44.469,22.332,44.469,20.527,43.948,20.527z" />
+                            <path
+                                d="M43.948,24.798c-2.074,0-4.148,0-6.225,0c-0.521,0-0.521,1.807,0,1.807c2.076,0,4.148,0,6.225,0     C44.469,26.604,44.469,24.798,43.948,24.798z" />
+                            <path
+                                d="M43.299,29.161c-4.635,0-9.27,0-13.902,0c-1.164,0-1.164,1.805,0,1.805c4.633,0,9.268,0,13.902,0     C44.461,30.966,44.461,29.161,43.299,29.161z" />
+                            <path
+                                d="M43.299,33.433c-4.635,0-9.27,0-13.902,0c-1.164,0-1.164,1.807,0,1.807c4.633,0,9.268,0,13.902,0     C44.461,35.237,44.461,33.433,43.299,33.433z" />
+                            <path
+                                d="M6.645,16.859c4.635,0,9.269,0,13.902,0c1.165,0,1.165-1.805,0-1.805c-4.634,0-9.268,0-13.902,0     C5.481,15.055,5.481,16.859,6.645,16.859z" />
+                            <path
+                                d="M20.548,19.327c-4.634,0-9.268,0-13.902,0c-1.164,0-1.164,1.805,0,1.805c4.635,0,9.269,0,13.902,0     C21.712,21.131,21.712,19.327,20.548,19.327z" />
+                            <path
+                                d="M20.548,24.105c-4.634,0-9.268,0-13.902,0c-1.164,0-1.164,1.806,0,1.806c4.635,0,9.269,0,13.902,0     C21.712,25.911,21.712,24.105,20.548,24.105z" />
+                            <path
+                                d="M20.548,28.378c-4.634,0-9.268,0-13.902,0c-1.164,0-1.164,1.807,0,1.807c4.635,0,9.269,0,13.902,0     C21.712,30.184,21.712,28.378,20.548,28.378z" />
+                            <path
+                                d="M20.548,32.739c-4.634,0-9.268,0-13.902,0c-1.164,0-1.164,1.807,0,1.807c4.635,0,9.269,0,13.902,0     C21.712,34.546,21.712,32.739,20.548,32.739z" />
+                            <path
+                                d="M29.135,27.225h6.77c0.244,0,0.443-0.153,0.443-0.345v-7.078c0-0.189-0.199-0.344-0.443-0.344h-6.77     c-0.246,0-0.445,0.154-0.445,0.344v7.078C28.69,27.069,28.889,27.225,29.135,27.225z" />
+                            <path
+                                d="M48.452,8.653c-0.293-0.084-7.248-2.054-11.982-2.054c-4.229,0-10.398,1.567-11.883,1.962     c-1.452-0.398-7.428-1.962-11.652-1.962c-4.731,0-11.914,1.968-12.217,2.052L0,8.848v33.7l1.181-0.256     c0.07-0.016,7.073-1.524,11.751-1.524c3.67,0,8.611,0.927,10.604,1.334l1.041,0.222l1.044-0.216     c2.043-0.405,7.16-1.34,10.848-1.34c4.674,0,11.434,1.509,11.5,1.522l1.188,0.268V8.854L48.452,8.653z M23.536,40.11     c-2.257-0.449-6.946-1.291-10.604-1.291c-3.752,0-8.735,0.887-10.984,1.326V10.339c1.931-0.493,7.35-1.793,10.984-1.793     c3.542,0,8.621,1.233,10.604,1.751V40.11z M47.209,40.139c-2.201-0.442-7.012-1.317-10.74-1.317     c-3.682,0-8.541,0.852-10.848,1.299V10.305c2.033-0.516,7.291-1.758,10.848-1.758c3.619,0,8.857,1.291,10.74,1.787V40.139z" />
+                        </svg><a>News</a></li>
+                    <li class="ContactUs "><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M450.697,0H61.303C27.501,0,0,27.501,0,61.303v389.392C0,484.499,27.501,512,61.303,512h389.392    C484.499,512,512,484.499,512,450.697V61.303C512,27.501,484.499,0,450.697,0z M491.602,450.697    c0,22.555-18.349,40.905-40.905,40.905H61.303c-22.556,0-40.905-18.35-40.905-40.905V61.303c0-22.555,18.349-40.905,40.905-40.905    h389.392c22.557,0,40.906,18.35,40.906,40.905V450.697z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M445.389,378.602l-91.291-91.291c-2.619-2.618-6.453-3.614-10.014-2.595l-13.596,3.885    c-1.016,0.291-1.981,0.736-2.86,1.323l-13.983,9.33c-0.002,0.001-0.004,0.003-0.006,0.004l-19.337,12.903    c-39.161-26.378-73.028-60.962-98.588-100.667l13.669-13.669c0.002-0.002,0.003-0.003,0.005-0.005l11.658-11.657    c1.225-1.226,2.118-2.744,2.595-4.41l3.885-13.597c1.018-3.562,0.023-7.394-2.595-10.014l-91.292-91.29    c-2.827-2.827-7.046-3.741-10.794-2.338l-15.539,5.827c-1.363,0.511-2.601,1.309-3.631,2.338    c-3.472,3.473-6.812,7.21-9.925,11.108c-42.09,52.695-37.823,128.439,9.925,176.186l148.59,148.59    c25.76,25.76,59.659,38.865,93.699,38.863c29.058-0.002,58.221-9.555,82.487-28.937c3.898-3.114,7.635-6.453,11.108-9.925    c1.029-1.03,1.827-2.267,2.338-3.631l5.828-15.539C449.131,385.65,448.216,381.43,445.389,378.602z M116.587,88.648l7.273-2.727    l82.403,82.403l-1.51,5.285l-2.576,2.576l-86.539-86.539C115.953,89.311,116.27,88.979,116.587,88.648z M266.692,394.141    L118.102,245.55c-37.655-37.654-43.353-95.881-15.115-139.707l84.767,84.767l-12.208,12.208c-3.331,3.331-3.947,8.51-1.491,12.53    c28.75,47.046,68.431,87.718,114.751,117.621c3.416,2.203,7.81,2.17,11.194-0.085l18.012-12.02l88.389,88.389    C362.57,437.494,304.345,431.797,266.692,394.141z M423.593,395.654c-0.33,0.318-0.663,0.634-0.998,0.949l-87.283-87.284    l2.312-1.543l6.293-1.797l82.404,82.402L423.593,395.654z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M471.203,253.96c-5.632,0-10.199,4.566-10.199,10.199v5.1c0,5.633,4.567,10.199,10.199,10.199    c5.632,0,10.199-4.566,10.199-10.199v-5.1C481.402,258.526,476.835,253.96,471.203,253.96z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M471.203,53.036c-5.632,0-10.199,4.566-10.199,10.199v162.167c0,5.633,4.567,10.199,10.199,10.199    c5.632,0,10.199-4.566,10.199-10.199V63.235C481.402,57.602,476.835,53.036,471.203,53.036z" />
+                                </g>
+                        </svg><a>Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <div class="swiper-container sections">
+                <div class="toggle_btn" onclick="toggle()">
+                    <img class="arrow" src="./image/interface/arrow.svg" alt="" srcset="">
+                </div>
+                <div class="swiper-wrapper section_swiper_wrapper">
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="Brand" data-index="0">
+
+                            <div class="title">
+
+                                <h2>Brand</h2>
+
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <p><span>L'Atelier de Patrick</span>法式派翠克
+                                    不僅是法式高級餐廳，更希望大家把這裡視作私人藝術工作坊（<span>atelier</span>），努力提供味覺饗宴及置身法國高級餐廳的享受。
+
+                                    提供的食材，大部分是歐洲空運進口，若台灣的當地食材夠好，甚至比進口品質還高，則選用台灣食材。
+
+                                    竭力提供客人道地的法國料理，以及物超所值的服務。</p>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="Menu" data-index="1">
+                            <div class="title">
+
+                                <h2>Menu</h2>
+
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div class="menu_swiper_container swiper-container">
+                                    <div class="menu_swiper_wrapper swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <h3><span> MENU OF NTD 2180</span></h3>
+                                            <p class="item">開胃小點<span>APPETISERS</span></p>
+                                            <p class="item">沙拉<span>DALYSALAD</span> </p>
+                                            <p class="item">湯品(三選一)<span>SOUPS IN THE CHOICE</span>
+                                            </p>
+                                            <P>今日濃湯 <span>DAILY SOUP</span></P>
+                                            <P>牛骨海海鮮清湯 <span>BEEF CONSOMME</span></P>
+                                            <P>雞肉海鮮清湯 <span>CHICKEN CONSOMME</span></P>
+                                            <P class="item">熱前菜(二選一)<span>HOT STARTERS IN THE
+                                                    CHOICE</span></P>
+                                            <P>炭烤鸚哥魚鮮魚卵生葉綠素與沙巴勇<br>
+                                                <span> GRILLED PARROTFISH SERVED WITH CHLOROPHYLL AND RHUM-ORANGE
+                                                    SABAYON</span>
+                                            </P>
+                                            <P>牛尾義大利餃佐番茄清湯醬汁與培根泡泡<span><br>
+                                                    OXTAIL RAVIOLI SERVED WITH TOMATO CONSOMME AND BACON FOAM</span>
+                                            </P>
+                                            <P class="item">法式冰沙<span>GRANITA</span></P>
+                                            <P class="item">主菜(二選一)<span>MAIN COURSES IN THE
+                                                    CHOICE</span></P>
+                                            <P>紅酒燉澳洲牛頓里昂馬鈴薯佐紅酒燉汁 <span>BAISED AUSTRALIAN BEEF CHEEKS IN RED WINE
+                                                    SERVED WITH LYONNAISE POTATOES</span></P>
+                                            <P>功夫鴨佐焗烤蔬菜
+                                                DUCK <span>CONFIT SERVED WITH CHEESE ROASTED VEGETABLES</span></P>
+                                            <P class="item">現榨果汁<span>FRESH JUICE</span></P>
+                                            <P class="item">甜點<span>DESSERT </span></P>
+                                            <p class="item">咖啡或茶<span>COFFEE OR TEA</span></p>
+                                            <P class="note">※&nbsp;&nbsp;以上套餐價格不含酒水及10%服務費 每人水資,礦泉水120元或汽泡水180元</P>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h3><span> MENU OF NTD 2680</span></h3>
+                                            <p class="item">開胃小點<span>APPETISERS</span></p>
+                                            <p class="item">沙拉<span>DALYSALAD</span> </p>
+                                            <p class="item">湯品(三選一)<span>SOUPS IN THE CHOICE</span>
+                                            </p>
+                                            <P>今日濃湯 <span>DAILY SOUP</span></P>
+                                            <P>牛骨海海鮮清湯 <span>BEEF CONSOMME</span></P>
+                                            <P>雞肉海鮮清湯 <span>CHICKEN CONSOMME</span></P>
+                                            <P class="item">熱前菜(二選一)<span>HOT STARTERS IN THE
+                                                    CHOICE</span></P>
+                                            <P>炭烤鸚哥魚鮮魚卵生葉綠素與沙巴勇<br>
+                                                <span> GRILLED PARROTFISH SERVED WITH CHLOROPHYLL AND RHUM-ORANGE
+                                                    SABAYON</span>
+                                            </P>
+                                            <P>牛尾義大利餃佐番茄清湯醬汁與培根泡泡<span><br>
+                                                    OXTAIL RAVIOLI SERVED WITH TOMATO CONSOMME AND BACON FOAM</span>
+                                            </P>
+                                            <P class="item">法式冰沙<span>GRANITA</span></P>
+                                            <P class="item">主菜(二選一)<span>MAIN COURSES IN THE
+                                                    CHOICE</span></P>
+                                            <P>紅酒燉澳洲牛頓里昂馬鈴薯佐紅酒燉汁 <span>BAISED AUSTRALIAN BEEF CHEEKS IN RED WINE
+                                                    SERVED WITH LYONNAISE POTATOES</span></P>
+                                            <P>功夫鴨佐焗烤蔬菜
+                                                DUCK <span>CONFIT SERVED WITH CHEESE ROASTED VEGETABLES</span></P>
+                                            <P class="item">現榨果汁<span>FRESH JUICE</span></P>
+                                            <P class="item">甜點<span>DESSERT </span></P>
+                                            <p class="item">咖啡或茶<span>COFFEE OR TEA</span></p>
+                                            <P class="note">※&nbsp;&nbsp;以上套餐價格不含酒水及10%服務費 每人水資,礦泉水120元或汽泡水180元</P>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h3><span> MENU OF NTD 3980/4280</span></h3>
+                                            <p class="item">開胃小點<span>APPETISERS</span></p>
+                                            <p class="item">沙拉<span>DALYSALAD</span> </p>
+                                            <p class="item">湯品(四選一)<span>SOUPS IN THE CHOICE</span>
+                                            </p>
+                                            <P>今日濃湯 <span>DAILY SOUP</span></P>
+                                            <P>牛骨海海鮮清湯 <span>BEEF CONSOMME</span></P>
+                                            <P>雞肉海鮮清湯 <span>CHICKEN CONSOMME</span></P>
+                                            <P class="item">熱前菜(二選一)<span>HOT STARTERS IN THE
+                                                    CHOICE</span></P>
+                                            <P>炭烤鸚哥魚鮮魚卵生葉綠素與沙巴勇<br>
+                                                <span> GRILLED PARROTFISH SERVED WITH CHLOROPHYLL AND RHUM-ORANGE
+                                                    SABAYON</span>
+                                            </P>
+                                            <P>牛尾義大利餃佐番茄清湯醬汁與培根泡泡<span><br>
+                                                    OXTAIL RAVIOLI SERVED WITH TOMATO CONSOMME AND BACON FOAM</span>
+                                            </P>
+                                            <P class="item">法式冰沙<span>GRANITA</span></P>
+                                            <P class="item">主菜(二選一)<span>MAIN COURSES IN THE
+                                                    CHOICE</span></P>
+                                            <P>紅酒燉澳洲牛頓里昂馬鈴薯佐紅酒燉汁 <span>BAISED AUSTRALIAN BEEF CHEEKS IN RED WINE
+                                                    SERVED WITH LYONNAISE POTATOES</span></P>
+                                            <P>功夫鴨佐焗烤蔬菜
+                                                DUCK <span>CONFIT SERVED WITH CHEESE ROASTED VEGETABLES</span></P>
+                                            <P class="item">現榨果汁<span>FRESH JUICE</span></P>
+                                            <P class="item">甜點<span>DESSERT </span></P>
+                                            <p class="item">咖啡或茶<span>COFFEE OR TEA</span></p>
+                                            <P class="note">※&nbsp;&nbsp;以上套餐價格不含酒水及10%服務費 每人水資,礦泉水120元或汽泡水180元</P>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <h3><span> MENU DE DEJEUNER </span></h3>
+                                            <p class="item">開胃小點<span>APPETISERS</span></p>
+                                            <p class="item">沙拉<span>DALYSALAD</span> </p>
+                                            <p class="item">湯品(三選一)<span>SOUPS IN THE CHOICE</span>
+                                            </p>
+                                            <P>今日濃湯 <span>DAILY SOUP</span></P>
+                                            <P>牛骨海海鮮清湯 <span>BEEF CONSOMME</span></P>
+                                            <P>雞肉海鮮清湯 <span>CHICKEN CONSOMME</span></P>
+                                            <P class="item">熱前菜(二選一)<span>HOT STARTERS IN THE
+                                                    CHOICE</span></P>
+                                            <P>炭烤鸚哥魚鮮魚卵生葉綠素與沙巴勇<br>
+                                                <span> GRILLED PARROTFISH SERVED WITH CHLOROPHYLL AND RHUM-ORANGE
+                                                    SABAYON</span>
+                                            </P>
+                                            <P>牛尾義大利餃佐番茄清湯醬汁與培根泡泡<span><br>
+                                                    OXTAIL RAVIOLI SERVED WITH TOMATO CONSOMME AND BACON FOAM</span>
+                                            </P>
+                                            <P class="item">法式冰沙<span>GRANITA</span></P>
+                                            <P class="item">主菜(二選一)<span>MAIN COURSES IN THE
+                                                    CHOICE</span></P>
+                                            <P>紅酒燉澳洲牛頓里昂馬鈴薯佐紅酒燉汁 <span>BAISED AUSTRALIAN BEEF CHEEKS IN RED WINE
+                                                    SERVED WITH LYONNAISE POTATOES</span></P>
+                                            <P>功夫鴨佐焗烤蔬菜
+                                                DUCK <span>CONFIT SERVED WITH CHEESE ROASTED VEGETABLES</span></P>
+                                            <P class="item">現榨果汁<span>FRESH JUICE</span></P>
+                                            <P class="item">甜點<span>DESSERT </span></P>
+                                            <p class="item">咖啡或茶<span>COFFEE OR TEA</span></p>
+                                            <P class="note">※&nbsp;&nbsp;以上套餐價格不含酒水及10%服務費 每人水資,礦泉水120元或汽泡水180元</P>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="Environment" data-index="2">
+                            <div class="title">
+                                <h2>Environment</h2>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en5.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_pic">
+                                    <div class="content_pic_inner">
+                                        <div class="env"><img class="env_pic" src="./image/environment/en7.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="Chef" data-index="3">
+
+                            <div class="title">
+
+                                <h2>Chef</h2>
+
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <h3 class="content_top">老闆兼主廚
+                                    <span class="chef_name">范姜群煜</span><span>Patrick Fan Chiang</span></h3>
+                                <p class="level1 content_top">
+                                    桃園縣新屋鄉鄉下的孩子，世代務農。從小就展現了對廚藝的熱愛：
+                                </p>
+                                <p class="level2 content_top">
+                                    五歲時經常在母親的大鍋灶旁，烤著剛被丟棄的蛋殼，等著蛋白什麼時候才會熟…在老房子空地上，用石塊架起破瓦片，收集枯木，煎著地瓜、蔬菜…</p>
+                                <p class="level2 content_top">
+                                    在農田和菜園中長大，隨手摘拾母親種植的蔬果就送入口中，喜愛嗅聞大自然的各種香味，美妙的味道對他而言，是記憶，更是眷戀</p>
+                                <p class="level2 content_top">
+                                    結婚後，只有在<span>Becky</span>想要煮煮東西的時候，<span>Patrick</span>才會讓出廚房。他常用鼻子細聞食材的原味，決定如何調味和料理…
+                                </p>
+                                <p class="level2 content_top">
+                                    赴美，在<span>Boston</span>的<span>NESE</span>語言學校短期遊學，在一堂作文課中，老師<span>MaryT.</span>
+                                    出了一道作文題目：若你可以放棄目前的工作，你最想做的是什麼？就像一道霹靂，<span>Patrick</span>終於寫道：開一家屬於自己風格的餐廳</p>
+                            </div>
+                            <div class="line line2"></div>
+                            <div class="content">
+                                <p class="year_2000 time_line level3">
+                                    返台後，一方面積極遊說家人，要放棄十餘年的公務員生涯，另一方面利用下班及放假，遠赴台北及各地學習烘焙、中、西餐、調酒…
+                                    ，五年後，最終獲得所有家人的全力支持</p>
+                                <p class="year_2006 time_line level3">7月辭去公務員，專心在台北縣八里鄉的中華穀類研究所學習麵包、蛋糕、小西點、歐式麵包……
+                                    12月赴法國</p>
+                                <p class="year_2006To2008 time_line level3">赴法國最高廚藝學院<span>ÉCOLE
+                                        LENÔTRE</span>正式展開法式料理之路。並在<span>LENÔTRE</span>集團的中央廚房甜點房及米其林三星餐廳<span>Le
+                                        Pré-Catelan</span>實習，並通過該餐廳的測驗，在熱台負責所有肉類的烹調</p>
+                                <p class="year_2009 time_line level3">要把最道地、最經典的法式料理，詮釋給每位來到<span>L’Atelier de
+                                        Patrick</span>的客人，讓人有置身巴黎高級餐廳的愉悅</p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="News" data-index="4">
+
+                            <div class="title">
+
+                                <h2>News</h2>
+
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div class="news_index">
+                                    <p onclick="newsDetailShow(0)">109年1月24號到1月31號過年期間店休 2月1號開始正常營業!<span
+                                            class="time">(2020-01-09)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(1)">2019/12/24~12/25聖誕暨12/31跨年晚間雙人特別菜單 <span
+                                            class="time">(2019-12-11)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(2)">2019/12/23(一)、12/30(一)正常營業,歡迎踴躍訂位! <span
+                                            class="time">(2019-11-27)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(3)">2019-08-07七夕情人節雙人特別套餐 <span
+                                            class="time">(2019-07-30)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(4)">2019-08-07七夕情人節雙人特別套餐 <span
+                                            class="time">(2019-07-30)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(5)">2019-08-07七夕情人節雙人特別套餐 <span
+                                            class="time">(2019-07-30)</span>
+                                    </p>
+                                    <p onclick="newsDetailShow(6)">
+                                        即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.
+                                        <span class="time">(2013-05-14)</span></p>
+                                    <p onclick="newsDetailShow(7)">恭賀本餐廳主廚 參加上海FHC國際烹飪藝術比賽現場烹飪,勇奪金牌! <span
+                                            class="time">(2012-11-18)</span></p>
+                                    <p onclick="newsDetailShow(8)">即日起提供商業午餐 ~ 週二至週五(節日除外) <span
+                                            class="time">(2011-02-07)</span></p>
+                                </div>
+                                <div class="news_details">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="swiper-slide section_swiper_slide">
+                        <section id="ContactUs" data-index="5">
+                            <div class="title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <p>電話：(02)2707-9586</p>
+                                <p>傳真：(02)2707-9576</p>
+                                <p>地址：台北市大安區四維路42號</p>
+                                <p>E-mail：chunyu.fc@msa.hinet.net</p>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination sections_pagination" hidden></div>
+            </div>
+            <div class="banner">
+                <div class="banner_chef"></div>
+                <div class="banner_env"></div>
+                <div class="swiper-container banner_swiper_container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner1.jpg');">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner2.jpg');">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner3.jpg');">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner4.webp');">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner5.webp');">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('./image/banner/banner6.webp');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
+    <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml12');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+                loop: false,
+            })
+            .add({
+                targets: '.ml12 .letter',
+                translateX: [40, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1300,
+                delay: (el, i) => 500 + 30 * i
+            }).add({
+                targets: '.ml12 .letter',
+                translateX: [0, -30],
+                opacity: [1, 0],
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i
+            });
+
+        var sections = new Swiper('.sections', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 1000,
+            mousewheel: true,
+            pagination: {
+                el: '.sections_pagination',
+                clickable: true,
+            },
+        });
+
+        var banner_sections = new Swiper('.banner_swiper_container', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            }
+        });
+
+        var menu_swiper = new Swiper('.menu_swiper_container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 1.3,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            }
+        });
+
+        let nav = document.querySelectorAll('li');
+        // window.setTimeout(() => {
+        //     nav.forEach(element => {
+        //         element.classList.remove('active');
+        //     });
+        //     nav[0].classList.add('active');
+        // }, 100)
+
+
+        let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
+        let nav_clickable = document.querySelectorAll('li');
+        for (let i = 0; i < nav.length; i++) {
+            nav_clickable[i].addEventListener("click", () => {
+                swiperPaginationBullet[i].click();
+                nav_clickable.forEach(element => {
+                    element.classList.remove('active');
+                });
+                nav_clickable[i].classList.add('active');
+            })
+        }
+
+
+
+
+
+        {
+            let arrow = document.querySelector('.arrow');
+            let sections = document.querySelector('.sections');
+            let section = document.querySelectorAll('section');
+
+            function toggle() {
+                //按鈕事件
+                arrow.classList.toggle('arrow_trigger');
+                sections.classList.toggle('sections_hide');
+                window.setTimeout(() => {
+                    section.forEach(element => {
+                        element.classList.toggle('section_hide');
+                    });
+                }, 300)
+            }
+        }
+
+        //news
+        const news_index = document.querySelector('.news_index');
+        const news_details = document.querySelector('.news_details');
+        const news = [
+            '<p>0即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>1即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>2即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>3即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>4即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>5即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>6即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>7即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+            '<p>7即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
+        ]
+
+        function newsDetailShow(i) {
+            news_index.style.opacity = "0";
+            news_index.style.pointerEvents = "none";
+
+            news_details.innerHTML = news[i] + `<div class="back" onclick="back()" style="width: 50px;height: auto"><svg                                          aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="long-arrow-alt-left"
+                                                class="svg-inline--fa fa-long-arrow-alt-left fa-w-14" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path fill="#816E4A"
+                                                    d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z">
+                                                </path>
+                                            </svg>
+                                        </div>`;
+            news_details.style.opacity = "1";
+            news_details.style.pointerEvents = "all";
+        }
+
+        function back() {
+            news_index.style.opacity = "1";
+            news_index.style.pointerEvents = "all";
+            news_details.style.opacity = "0";
+            news_details.style.pointerEvents = "none";
+        }
+
+        //model
+        {
+            let index_now = 0;
+
+            const mask_container = document.querySelector('.mask_container');
+            const envPics = document.querySelectorAll('.env_pic');
+            const mask = document.querySelector('.mask');
+            const pre_btn = document.querySelector('.pre_btn');
+            const next_btn = document.querySelector('.next_btn');
+            const close_btn = document.querySelector('.close_btn');
+            const banner = document.querySelector('.banner');
+            const banner_swiper_container = document.querySelector('.banner_swiper_container');
+            let nav = document.querySelectorAll('li');
+            const banner_chef = document.querySelector('.banner_chef');
+            const banner_env = document.querySelector('.banner_env');
+            let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
+            let nav_index = document.querySelector('.nav_index');
+            nav_index.innerHTML = 'Brand';
+
+            var banner_env_5s;
+
+            // for (let i = 0; i < nav.length; i++) {
+            //     nav[i].addEventListener('click',()=>{
+            //         swiperPaginationBullet[i].click();
+            //     })
+
+            // }
+
+            let sections = document.querySelectorAll('section');
+            const options = {
+                threshold: .8,
+            }
+
+            let observer = new IntersectionObserver(navCheck, options);
+
+            var x = 0;
+            var first = true
+
+            function navCheck(entries) {
+                for (let i = 0; i < entries.length; i++) {
+                    if (entries[i].intersectionRatio > .8) {
+                        x = entries[i].target.getAttribute('data-index');
+                    }
+                }
+
+                if (x == 2) {
+                    banner_chef.style.opacity = 0;
+                    banner_chef.style.pointerEvents = "none";
+                    banner_env.style.opacity = 1;
+                    banner_env.style.pointerEvents = "all";
+                    banner_swiper_container.style.opacity = 0;
+                    banner_swiper_container.style.pointerEvents = "none";
+                } else if (x == 3) {
+                    banner_chef.style.opacity = 1;
+                    banner_chef.style.pointerEvents = "all";
+                    banner_env.style.opacity = 0;
+                    banner_env.style.pointerEvents = "none";
+                    banner_swiper_container.style.opacity = 0;
+                    banner_swiper_container.style.pointerEvents = "none";
+                } else {
+                    banner_chef.style.opacity = 0;
+                    banner_chef.style.pointerEvents = "none";
+                    banner_env.style.opacity = 0;
+                    banner_env.style.pointerEvents = "none";
+                    banner_swiper_container.style.opacity = 1;
+                    banner_swiper_container.style.pointerEvents = "all";
+                }
+
+
+                navche();
+                initial();
+                first = false;
+                switch (x) {
+                    case '0':
+                        nav_index.innerHTML = 'Brand';
+                        break;
+                    case '1':
+                        nav_index.innerHTML = 'Menu';
+                        break;
+                    case '2':
+                        nav_index.innerHTML = 'Environment';
+                        break;
+                    case '3':
+                        nav_index.innerHTML = 'Chef';
+                        break;
+                    case '4':
+                        nav_index.innerHTML = 'News';
+                        break;
+                    case '5':
+                        nav_index.innerHTML = 'Contact us';
+                        break;
+                }
+            }
+
+
+            function navche() {
+                nav.forEach(element => {
+                    element.classList.remove('active');
+                });
+                nav[x].classList.add('active');
+            }
+
+            sections.forEach(section => {
+                observer.observe(section);
+            })
+
+            function initial() {
+                if (first == true) {
+                    nav[5].classList.remove('active');
+                    nav[0].classList.add('active');
+                }
+            }
+            initial();
+
+            function bannerEnv5s(i) {
+                banner_env_5s = window.setInterval(() => {
+
+                    banner_env.style.backgroundImage = `url(${envPics[i].src})`;
+                    if (i == envPics.length - 1) {
+                        i = 0;
+                    } else {
+                        i++;
+                    }
+                }, 5000)
+            };
+            bannerEnv5s(1);
+
+
+            for (let i = 0; i < envPics.length; i++) {
+                envPics[i].addEventListener('click', () => {
+                    clearInterval(banner_env_5s);
+                    index_now = i;
+                    mask_container.style.backgroundImage = `url(${envPics[i].src})`;
+                    banner_env.style.backgroundImage = `url(${envPics[i].src})`;
+                    mask.classList.add('mask_show');
+                })
+            };
+
+            pre_btn.addEventListener('click', pre);
+            next_btn.addEventListener('click', next);
+            close_btn.addEventListener('click', closeModel);
+
+            function closeModel() {
+                mask.classList.remove('mask_show');
+                bannerEnv5s(index_now + 1);
+            }
+
+            function pre() {
+                index_now--
+                def_preI_nextI()
+                mask_container.style.backgroundImage = `url(${envPics[index_now].src})`;
+                banner_env.style.backgroundImage = `url(${envPics[index_now].src})`;
+            }
+
+            function next() {
+                index_now++
+                def_preI_nextI()
+                mask_container.style.backgroundImage = `url(${envPics[index_now].src})`;
+                banner_env.style.backgroundImage = `url(${envPics[index_now].src})`;
+            }
+
+            function def_preI_nextI() {
+                if (index_now < 0) {
+                    index_now = envPics.length - 1;
+                } else if (index_now > envPics.length - 1) {
+                    index_now = 0;
+                } else {
+                    index_now = index_now;
+                }
+            }
+        }
+
+        {
+            let mobile_menu = document.querySelector('.mobile_menu');
+            let nav_list = document.querySelector('.nav_list');
+            let header = document.querySelector('header');
+            let top = document.querySelector('.top');
+            let middle = document.querySelector('.middle');
+            let bottom = document.querySelector('.bottom');
+            mobile_menu.addEventListener("click", () => {
+                nav_list.classList.toggle('nav_list_show');
+                header.classList.toggle('header_show');
+                top.classList.toggle('rotate45');
+                middle.classList.toggle('hide');
+                bottom.classList.toggle('rotateM45');
+            })
+
+            nav_list.addEventListener('click', () => {
+                mobile_menu.click();
+            })
+
+
+        }
+
+        //nav section 連動
+
+        // 切換按鈕
+    </script>
+</body>
+
+</html>
