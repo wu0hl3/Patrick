@@ -50,8 +50,8 @@ html {
   text-align: center;
   background: #310c0e;
   overflow: hidden;
-  -webkit-transition: 2s;
-  transition: 3s 3s;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 .animation h1 {
@@ -184,18 +184,7 @@ html {
 }
 
 .mask .mask_container .close_btn:hover {
-  text-shadow: 0px 0px 5px silver,
- 0px -1px 5px silver,
- 0px -2px 5px silver,
-  0px 0px 5px silver,
- 0px 1px 5px silver,
- 0px 2px 5px silver,
-  0px 0px 5px silver,
- -1px 0px 5px silver,
- -2px 0px 5px silver,
-  0px 0px 5px silver,
- 1px 0px 5px silver,
- 2px 0px 5px silver;
+  text-shadow: 0px 0px 5px silver, 0px -1px 5px silver, 0px -2px 5px silver,  0px 0px 5px silver, 0px 1px 5px silver, 0px 2px 5px silver,  0px 0px 5px silver, -1px 0px 5px silver, -2px 0px 5px silver,  0px 0px 5px silver, 1px 0px 5px silver, 2px 0px 5px silver;
 }
 
 .mask .mask_container .pre_btn,
@@ -902,7 +891,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 360px) {
   #Menu .content .menu_swiper_container .swiper-slide h3 {
     font-size: 5rem;
     white-space: nowrap;

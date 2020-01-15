@@ -541,7 +541,9 @@
 
         function hideAnimate() {
             let animation = document.querySelector('.animation');
-            animation.classList.add('animation_hide');
+            window.setTimeout(()=>{
+                animation.classList.add('animation_hide');
+            },1000)
         }
 
         openAnimate(hideAnimate);
