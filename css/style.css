@@ -896,6 +896,9 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
     font-size: 5rem;
     white-space: nowrap;
   }
+  #Menu .content .menu_swiper_container .swiper-slide h3 span {
+    white-space: nowrap;
+  }
 }
 
 #Menu .content .menu_swiper_container .swiper-slide p {

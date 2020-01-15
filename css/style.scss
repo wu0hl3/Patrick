@@ -763,6 +763,9 @@ main {
 					@media (max-width:360px) {
 						font-size: 5rem;
 						white-space: nowrap;
+						span{
+							white-space: nowrap;
+						}
 					}
 				}
 
