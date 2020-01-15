@@ -32,6 +32,62 @@ html {
 	display: flex;
 }
 
+
+
+.animation {
+	position: absolute;
+	top: 0%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	text-align: center;
+	background: $wineRed;
+	overflow: hidden;
+	animation-name:toTransparent;
+	animation-delay: 3s;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	transition: 1s;
+
+	h1 {
+		font-family: 'Noto Sans TC', sans-serif;
+		color: white;
+		font-size: 70px;
+		text-align: center;
+		line-height: 100vh;
+
+		.letter {
+			display: inline-block;
+			line-height: 100vh;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+
+		@media (max-width:700px) {
+			font-size: 50px;
+		}
+
+		@media (max-width:500px) {
+			font-size: 35px;
+		}
+
+		@media (max-width:350px) {
+			font-size: 30px;
+		}
+	}
+}
+
+@keyframes toTransparent{
+0%{
+opacity: 1;
+}
+100%{
+	opacity: 0;
+	pointer-events: none;
+}
+}
+
+
+
 .mask_show {
 	opacity: 1 !important;
 	pointer-events: all !important;
@@ -692,11 +748,12 @@ main {
 					text-align: center;
 					font-size: 3rem;
 					margin-bottom: 1.5rem;
-					
+
 
 					@media (max-width:767px) {
 						font-size: 6rem;
 					}
+
 					@media (max-width:321px) {
 						font-size: 5rem;
 						white-space: nowrap;
@@ -713,6 +770,7 @@ main {
 						font-size: 2rem;
 						line-height: 2.5rem;
 					}
+
 					@media (max-width:321px) {
 						line-height: 2rem;
 

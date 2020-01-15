@@ -41,6 +41,79 @@ html {
   display: flex;
 }
 
+.animation {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  background: #310c0e;
+  overflow: hidden;
+  -webkit-animation-name: toTransparent;
+          animation-name: toTransparent;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.animation h1 {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.animation h1 .letter {
+  display: inline-block;
+  line-height: 100vh;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+@media (max-width: 700px) {
+  .animation h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .animation h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 350px) {
+  .animation h1 {
+    font-size: 30px;
+  }
+}
+
+@-webkit-keyframes toTransparent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes toTransparent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .mask_show {
   opacity: 1 !important;
   pointer-events: all !important;
