@@ -3,15 +3,27 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 425px) {
+@media (max-height: 952px) {
   html {
-    font-size: 35%;
+    font-size: 56.25%;
   }
 }
 
-@media (max-width: 425px) and (min-height: 732px) {
+@media (max-height: 824px) {
   html {
-    font-size: 40%;
+    font-size: 50%;
+  }
+}
+
+@media (max-height: 696px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media (max-height: 568px) {
+  html {
+    font-size: 37.5%;
   }
 }
 
@@ -743,7 +755,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section {
 
 main .sections .section_swiper_wrapper .section_swiper_slide section .title {
   width: 100%;
-  height: 30%;
+  height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,8 +801,9 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .line {
 }
 
 main .sections .section_swiper_wrapper .section_swiper_slide section .content {
-  width: 68.67%;
+  width: 80%;
   height: 70%;
+  overflow: auto;
 }
 
 @media (max-width: 767px) {
@@ -841,12 +854,6 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   font-size: 3rem;
 }
 
-@media (max-width: 425px) {
-  #Brand .content p {
-    font-size: 3rem;
-  }
-}
-
 #Menu .line {
   margin: auto;
 }
@@ -877,6 +884,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-y: auto;
 }
 
 #Menu .content .menu_swiper_container .swiper-slide h3 {
@@ -885,15 +893,8 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 767px) {
-  #Menu .content .menu_swiper_container .swiper-slide h3 {
-    font-size: 6rem;
-  }
-}
-
 @media (max-width: 360px) {
   #Menu .content .menu_swiper_container .swiper-slide h3 {
-    font-size: 5rem;
     white-space: nowrap;
   }
   #Menu .content .menu_swiper_container .swiper-slide h3 span {
@@ -906,19 +907,6 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   line-height: 2rem;
   font-weight: 400;
   text-align: center;
-}
-
-@media (max-width: 767px) {
-  #Menu .content .menu_swiper_container .swiper-slide p {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (max-width: 321px) {
-  #Menu .content .menu_swiper_container .swiper-slide p {
-    line-height: 2rem;
-  }
 }
 
 #Menu .content .menu_swiper_container .swiper-slide .item {
@@ -939,18 +927,12 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 
 #Menu .content .menu_swiper_container .swiper-slide .note {
   font-weight: 1000;
-  font-size: .8rem;
-  position: absolute;
-  bottom: .2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  white-space: nowrap;
+  font-size: .5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 425px) {
   #Menu .content .menu_swiper_container .swiper-slide .note {
-    font-size: .8rem;
     white-space: normal;
     width: 260px;
   }
@@ -958,7 +940,6 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 
 @media (max-width: 425px) and (min-height: 732px) {
   #Menu .content .menu_swiper_container .swiper-slide .note {
-    font-size: .8rem;
     white-space: normal;
     width: 260px;
   }
@@ -1002,9 +983,9 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 
 #Environment .content .content_pic {
   width: 33%;
-  height: 120px;
+  height: 12rem;
   margin-bottom: 15px;
-  min-width: 120px;
+  min-width: 12rem;
 }
 
 @media (max-width: 600px) {
@@ -1022,7 +1003,7 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 
 #Environment .content .content_pic .content_pic_inner {
   width: 90%;
-  height: 100px;
+  height: 10rem;
   margin: auto;
   border: 1px solid #816e4a;
 }
@@ -1120,6 +1101,10 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   }
 }
 
+#Chef .line2 {
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   #Chef .line2 {
     display: block;
@@ -1149,7 +1134,6 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
 }
 
 #Chef .content h3 span.chef_name {
-  font-size: 2.5rem;
   font-family: "微軟正黑體" !important;
   margin: 0 !important;
 }
@@ -1172,35 +1156,11 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   margin-bottom: 1.5rem !important;
 }
 
-@media (max-width: 360px) and (max-height: 640px) {
-  #Chef .content .level2 {
-    font-size: .5rem;
-  }
-}
-
-@media (max-width: 320px) {
-  #Chef .content .level2 {
-    font-size: 1rem;
-  }
-}
-
 #Chef .content .level3 {
   font-size: 1.2rem;
   line-height: 1.8rem;
   letter-spacing: 1px;
   margin-bottom: 8px !important;
-}
-
-@media (max-width: 425px) and (max-height: 732px) {
-  #Chef .content .level3 {
-    font-size: .8rem;
-  }
-}
-
-@media (max-width: 360px) and (max-height: 640px) {
-  #Chef .content .level3 {
-    font-size: .5rem;
-  }
 }
 
 #Chef .content .time_line::before {
@@ -1428,11 +1388,5 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content sp
   line-height: 5rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-}
-
-@media (max-width: 425px) {
-  #ContactUs .content p {
-    font-size: 3rem;
-  }
 }
 /*# sourceMappingURL=style.css.map */

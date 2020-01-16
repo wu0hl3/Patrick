@@ -4,12 +4,18 @@ $wineRed: #310c0e;
 html {
 	font-size: 62.5%;
 
-	@media (max-width:425px) {
-		font-size: 35%;
+	@media (max-height:952px) {
+		font-size: 56.25%;
 	}
-
-	@media (max-width:425px) and (min-height:732px) {
-		font-size: 40%;
+	@media (max-height:824px) {
+		font-size: 50%;
+	}
+	
+	@media (max-height:696px) {
+		font-size: 43.75%;
+	}
+	@media (max-height:568px) {
+		font-size: 37.5%;
 	}
 }
 
@@ -629,7 +635,7 @@ main {
 
 					.title {
 						width: 100%;
-						height: 30%;
+						height: 20%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -664,8 +670,9 @@ main {
 					}
 
 					.content {
-						width: 68.67%;
+						width: 80%;
 						height: 70%;
+						overflow: auto;
 
 						@media (max-width:767px) {
 							height: 100% !important;
@@ -716,9 +723,9 @@ main {
 				font-size: 3rem;
 			}
 
-			@media (max-width:425px) {
-				font-size: 3rem;
-			}
+			// @media (max-width:425px) {
+			// 	font-size: 3rem;
+			// }
 		}
 	}
 }
@@ -749,6 +756,7 @@ main {
 				width: 100%;
 				height: 100%;
 				position: relative;
+				overflow-y: auto;
 
 				h3 {
 					text-align: center;
@@ -756,14 +764,15 @@ main {
 					margin-bottom: 1.5rem;
 
 
-					@media (max-width:767px) {
-						font-size: 6rem;
-					}
+					// @media (max-width:767px) {
+					// 	font-size: 6rem;
+					// }
 
 					@media (max-width:360px) {
-						font-size: 5rem;
+						// font-size: 5rem;
 						white-space: nowrap;
-						span{
+
+						span {
 							white-space: nowrap;
 						}
 					}
@@ -776,12 +785,12 @@ main {
 					text-align: center;
 
 					@media (max-width:767px) {
-						font-size: 2rem;
-						line-height: 2.5rem;
+						// font-size: 2rem;
+						// line-height: 2.5rem;
 					}
 
 					@media (max-width:321px) {
-						line-height: 2rem;
+						// line-height: 2rem;
 
 					}
 				}
@@ -802,21 +811,17 @@ main {
 
 				.note {
 					font-weight: 1000;
-					font-size: .8rem;
-					position: absolute;
-					bottom: .2rem;
-					left: 50%;
-					transform: translateX(-50%);
-					white-space: nowrap;
+					font-size: .5rem;
+					margin-top: 1rem;
 
 					@media (max-width:425px) {
-						font-size: .8rem;
+						// font-size: .8rem;
 						white-space: normal;
 						width: 260px;
 					}
 
 					@media (max-width:425px) and (min-height:732px) {
-						font-size: .8rem;
+						// font-size: .8rem;
 						white-space: normal;
 						width: 260px;
 					}
@@ -855,9 +860,9 @@ main {
 
 		.content_pic {
 			width: 33%;
-			height: 120px;
+			height: 12rem;
 			margin-bottom: 15px;
-			min-width: 120px;
+			min-width: 12rem;
 
 			@media (max-width:600px) {
 				width: 50%;
@@ -870,7 +875,7 @@ main {
 
 			.content_pic_inner {
 				width: 90%;
-				height: 100px;
+				height: 10rem;
 				margin: auto;
 				border: 1px solid $gold;
 
@@ -948,6 +953,7 @@ main {
 	}
 
 	.line2 {
+		width: 100%;
 		@media (max-width:767px) {
 			display: block;
 			margin: 0 auto;
@@ -972,7 +978,7 @@ main {
 			@media (max-width:320px) {}
 
 			span.chef_name {
-				font-size: 2.5rem;
+				// font-size: 2.5rem;
 				font-family: "微軟正黑體" !important;
 				margin: 0 !important;
 			}
@@ -996,11 +1002,11 @@ main {
 			margin-bottom: 1.5rem !important;
 
 			@media (max-width:360px) and (max-height:640px) {
-				font-size: .5rem;
+				// font-size: .5rem;
 			}
 
 			@media (max-width:320px) {
-				font-size: 1rem;
+				// font-size: 1rem;
 			}
 		}
 
@@ -1010,13 +1016,7 @@ main {
 			letter-spacing: 1px;
 			margin-bottom: 8px !important;
 
-			@media (max-width:425px) and (max-height:732px) {
-				font-size: .8rem;
-			}
 
-			@media (max-width:360px) and (max-height:640px) {
-				font-size: .5rem;
-			}
 
 		}
 
@@ -1217,9 +1217,6 @@ main {
 			line-height: 5rem;
 			transform: translateY(-100%);
 
-			@media (max-width:425px) {
-				font-size: 3rem;
-			}
 		}
 	}
 }

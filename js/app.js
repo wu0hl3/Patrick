@@ -1,3 +1,9 @@
+
+
+// 568-1080 = 512 
+// 12-20 = 8
+
+//動畫
 function openAnimate(callback) {
     var textWrapper = document.querySelector('.ml12');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -21,33 +27,38 @@ function openAnimate(callback) {
             duration: 1200,
             delay: (el, i) => 100 + 30 * i
         });
-
     callback();
-
 }
 
 function hideAnimate() {
     let animation = document.querySelector('.animation');
-    window.setTimeout(()=>{
+    window.setTimeout(() => {
         animation.classList.add('animation_hide');
-    },1000)
+    }, 1000)
 }
-
 openAnimate(hideAnimate);
 
 
-
+//初始化swiper
 
 var sections = new Swiper('.sections', {
     direction: 'vertical',
     slidesPerView: 1,
     spaceBetween: 0,
     speed: 1000,
-    mousewheel: true,
+    nested: true,
+    // mousewheel: true,
     pagination: {
         el: '.sections_pagination',
         clickable: true,
     },
+    on: {
+
+        onSlideChangeStart: function (swiper) { //滑動父級需要激活滾輪事件
+            swiper.enableMousewheelControl();
+        }
+
+    }
 });
 
 var banner_sections = new Swiper('.banner_swiper_container', {
@@ -65,7 +76,7 @@ var menu_swiper = new Swiper('.menu_swiper_container', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 1.3,
+    slidesPerView: 1.25,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -75,6 +86,7 @@ var menu_swiper = new Swiper('.menu_swiper_container', {
     }
 });
 
+
 let nav = document.querySelectorAll('li');
 // window.setTimeout(() => {
 //     nav.forEach(element => {
@@ -83,7 +95,7 @@ let nav = document.querySelectorAll('li');
 //     nav[0].classList.add('active');
 // }, 100)
 
-
+//nav和swiper點點連動
 let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
 let nav_clickable = document.querySelectorAll('li');
 for (let i = 0; i < nav.length; i++) {
@@ -99,7 +111,7 @@ for (let i = 0; i < nav.length; i++) {
 
 
 
-
+//section的收合
 {
     let arrow = document.querySelector('.arrow');
     let sections = document.querySelector('.sections');
@@ -132,6 +144,7 @@ const news = [
     '<p>7即日起,凡網路訂位用餐(商業午餐除外)，消費2人以上套餐贈送價值220元之主廚手工法國老麵長棍麵包1條(一桌限1條)；特殊節日(聖誕節、跨年夜、情人節、母親節等)不在此限.</p><span class = "time" > (2019 - 12 - 11) </span>',
 ]
 
+//消息展開
 function newsDetailShow(i) {
     news_index.style.opacity = "0";
     news_index.style.pointerEvents = "none";
@@ -148,7 +161,7 @@ function newsDetailShow(i) {
     news_details.style.opacity = "1";
     news_details.style.pointerEvents = "all";
 }
-
+//退回
 function back() {
     news_index.style.opacity = "1";
     news_index.style.pointerEvents = "all";
@@ -159,31 +172,48 @@ function back() {
 //model
 {
     let index_now = 0;
-
+    //model最外層
     const mask_container = document.querySelector('.mask_container');
-    const envPics = document.querySelectorAll('.env_pic');
+    // model最外層
     const mask = document.querySelector('.mask');
+    // 環境圖
+    const envPics = document.querySelectorAll('.env_pic');
+    // model的控制
     const pre_btn = document.querySelector('.pre_btn');
     const next_btn = document.querySelector('.next_btn');
     const close_btn = document.querySelector('.close_btn');
+    // Banner
     const banner = document.querySelector('.banner');
     const banner_swiper_container = document.querySelector('.banner_swiper_container');
+    //nav li    
     let nav = document.querySelectorAll('li');
+    // 廚師的背景    
     const banner_chef = document.querySelector('.banner_chef');
+    // 環境的背景
     const banner_env = document.querySelector('.banner_env');
-    let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
-    let nav_index = document.querySelector('.nav_index');
-    nav_index.innerHTML = 'Brand';
-
+    //env背景圖的輪播事件名稱 
     var banner_env_5s;
+    // 
+    let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
+    // nav
+    let nav_index = document.querySelector('.nav_index');
 
-    // for (let i = 0; i < nav.length; i++) {
-    //     nav[i].addEventListener('click',()=>{
-    //         swiperPaginationBullet[i].click();
-    //     })
+    //初始化
+    nav_index.innerHTML = 'Brand';
+    // 環境的輪播
+    function bannerEnv5s(i) {
+        banner_env_5s = window.setInterval(() => {
+            banner_env.style.backgroundImage = `url(${envPics[i].src})`;
+            if (i == envPics.length - 1) {
+                i = 0;
+            } else {
+                i++;
+            }
+        }, 5000)
+    };
+    bannerEnv5s(1);
 
-    // }
-
+    //畫面監控
     let sections = document.querySelectorAll('section');
     const options = {
         threshold: .8,
@@ -200,7 +230,7 @@ function back() {
                 x = entries[i].target.getAttribute('data-index');
             }
         }
-
+        // 判斷在哪個頁面
         if (x == 2) {
             banner_chef.style.opacity = 0;
             banner_chef.style.pointerEvents = "none";
@@ -224,7 +254,7 @@ function back() {
             banner_swiper_container.style.pointerEvents = "all";
         }
 
-
+        // 手機板畫面的nav
         navche();
         initial();
         first = false;
@@ -250,7 +280,6 @@ function back() {
         }
     }
 
-
     function navche() {
         nav.forEach(element => {
             element.classList.remove('active');
@@ -261,7 +290,7 @@ function back() {
     sections.forEach(section => {
         observer.observe(section);
     })
-
+    // swiper初始化的時候因為都是同一頁 所以要更改nav
     function initial() {
         if (first == true) {
             nav[5].classList.remove('active');
@@ -270,20 +299,9 @@ function back() {
     }
     initial();
 
-    function bannerEnv5s(i) {
-        banner_env_5s = window.setInterval(() => {
-
-            banner_env.style.backgroundImage = `url(${envPics[i].src})`;
-            if (i == envPics.length - 1) {
-                i = 0;
-            } else {
-                i++;
-            }
-        }, 5000)
-    };
-    bannerEnv5s(1);
 
 
+    // model的展示  控制
     for (let i = 0; i < envPics.length; i++) {
         envPics[i].addEventListener('click', () => {
             clearInterval(banner_env_5s);
