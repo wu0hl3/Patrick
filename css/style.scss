@@ -33,7 +33,7 @@ html {
 
 #all {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 	display: flex;
 }
@@ -910,12 +910,12 @@ main {
 }
 
 #Chef {
-	@media screen {
+	
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: column;
-	}
+	
 
 	.title {
 		height: 20%;
