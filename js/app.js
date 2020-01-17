@@ -9,8 +9,8 @@ function openAnimate(callback) {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     anime.timeline({
-            loop: false,
-        })
+        loop: false,
+    })
         .add({
             targets: '.ml12 .letter',
             translateX: [40, 0],
@@ -353,17 +353,67 @@ function back() {
     let top = document.querySelector('.top');
     let middle = document.querySelector('.middle');
     let bottom = document.querySelector('.bottom');
-    mobile_menu.addEventListener("click", () => {
-        nav_list.classList.toggle('nav_list_show');
-        header.classList.toggle('header_show');
-        top.classList.toggle('rotate45');
-        middle.classList.toggle('hide');
-        bottom.classList.toggle('rotateM45');
-    })
+    if (document.body.clientWidth < 768) {
+        mobile_menu.addEventListener("click", () => {
+            nav_list.classList.toggle('nav_list_show');
+            header.classList.toggle('header_show');
+            top.classList.toggle('rotate45');
+            middle.classList.toggle('hide');
+            bottom.classList.toggle('rotateM45');
+        })
 
-    nav_list.addEventListener('click', () => {
-        mobile_menu.click();
-    })
+        nav_list.addEventListener('click', () => {
+            mobile_menu.click();
+        })
+    }
 
+    {
+        let x = 0;
 
+        let titles = document.querySelectorAll('.title');
+        const options = {
+            threshold: .7,
+        }
+
+        let title_observer = new IntersectionObserver(titleCheck, options);
+        titles.forEach(title => {
+            title_observer.observe(title);
+        })
+
+        function titleCheck(entries) {
+            for (let i = 0; i < entries.length; i++) {
+                const entry = entries[i];
+                if (entry.intersectionRatio > .8) {
+                    x = i;
+                }
+            }
+            console.log('123')
+            entries[x].target.classList.add('show_title')
+        }
+
+    }
+    {
+        let x = 0;
+
+        let contents = document.querySelectorAll('.content');
+        const options = {
+            threshold: .7,
+        }
+
+        let content_observer = new IntersectionObserver(contentCheck, options);
+        contents.forEach(content => {
+            content_observer.observe(content);
+        })
+
+        function contentCheck(entries) {
+            for (let i = 0; i < entries.length; i++) {
+                const entry = entries[i];
+                if (entry.intersectionRatio > .8) {
+                    x = i;
+                }
+            }
+
+            entries[x].target.classList.add('show_content')
+        }
+    }
 }

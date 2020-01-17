@@ -703,6 +703,12 @@ main .sections .toggle_btn {
   }
 }
 
+@media (max-width: 767px) {
+  main .sections .toggle_btn {
+    display: none;
+  }
+}
+
 main .sections .toggle_btn .arrow {
   margin-left: auto;
   margin-right: 5px;
@@ -765,6 +771,11 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 @media (max-width: 767px) {
@@ -786,6 +797,12 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .title h2 {
   }
 }
 
+main .sections .section_swiper_wrapper .section_swiper_slide section .show_title {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 main .sections .section_swiper_wrapper .section_swiper_slide section .line {
   display: block;
   width: 80%;
@@ -804,6 +821,11 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content {
   width: 80%;
   height: 70%;
   overflow: auto;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 @media (max-width: 767px) {
@@ -834,6 +856,12 @@ main .sections .section_swiper_wrapper .section_swiper_slide section .content p 
 main .sections .section_swiper_wrapper .section_swiper_slide section .content span {
   margin: 4px;
   font-family: "Reenie Beanie", cursive !important;
+}
+
+main .sections .section_swiper_wrapper .section_swiper_slide section .show_content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 #Brand .content {

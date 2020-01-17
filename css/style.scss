@@ -593,6 +593,9 @@ main {
 				z-index: 10;
 				transform: translateX(50%);
 			}
+			@media (max-width:767px){
+				display: none;
+			}
 
 			.arrow {
 				margin-left: auto;
@@ -639,6 +642,9 @@ main {
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						opacity: 0;
+						transition: 3s;
+						transform: translateY(20%);
 
 						@media (max-width:767px) {
 							display: none;
@@ -655,6 +661,10 @@ main {
 							height: 20%;
 							;
 						}
+					}
+					.show_title{
+						opacity: 1;
+						transform: translateY(0);
 					}
 
 					.line {
@@ -673,6 +683,9 @@ main {
 						width: 80%;
 						height: 70%;
 						overflow: auto;
+						opacity: 0;
+						transform: translateY(20%);
+						transition: 3s;
 
 						@media (max-width:767px) {
 							height: 100% !important;
@@ -703,6 +716,10 @@ main {
 							font-family: "Reenie Beanie", cursive !important;
 						}
 
+					}
+					.show_content{
+						opacity: 1;
+						transform: translateY(0);
 					}
 				}
 			}
