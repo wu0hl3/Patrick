@@ -84,6 +84,34 @@ var menu_swiper = new Swiper('.menu_swiper_container', {
     }
 });
 
+var mobile_environment_swiper = new Swiper('.mobile_environment_swiper_container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.mobile_environment_swiper_pagination',
+    },
+});
+
+var mobile_news_swiper = new Swiper('.mobile_news_swiper_container', {
+    slidesPerView: 'auto',
+    autoHeight: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+        el: '.mobile_news_swiper_pagination',
+        clickable: true,
+    },
+});
+
 {
     // window.setTimeout(() => {
     //     nav.forEach(element => {
@@ -192,11 +220,8 @@ function back() {
     var banner_env_5s;
     // 
     let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
-    // nav
-    let nav_index = document.querySelector('.nav_index');
 
     //初始化
-    nav_index.innerHTML = 'Brand';
     // 環境的輪播
     function bannerEnv5s(i) {
         banner_env_5s = window.setInterval(() => {
@@ -251,30 +276,10 @@ function back() {
             banner_swiper_container.style.pointerEvents = "all";
         }
 
-        // 手機板畫面的nav
+
         navche();
         initial();
         first = false;
-        switch (x) {
-            case '0':
-                nav_index.innerHTML = 'Brand';
-                break;
-            case '1':
-                nav_index.innerHTML = 'Menu';
-                break;
-            case '2':
-                nav_index.innerHTML = 'Environment';
-                break;
-            case '3':
-                nav_index.innerHTML = 'Chef';
-                break;
-            case '4':
-                nav_index.innerHTML = 'News';
-                break;
-            case '5':
-                nav_index.innerHTML = 'Contact us';
-                break;
-        }
     }
 
     function navche() {
@@ -344,25 +349,6 @@ function back() {
 }
 
 {
-    let mobile_menu = document.querySelector('.mobile_menu');
-    let nav_list = document.querySelector('.nav_list');
-    let header = document.querySelector('header');
-    let top = document.querySelector('.top');
-    let middle = document.querySelector('.middle');
-    let bottom = document.querySelector('.bottom');
-    if (document.body.clientWidth < 768) {
-        mobile_menu.addEventListener("click", () => {
-            nav_list.classList.toggle('nav_list_show');
-            header.classList.toggle('header_show');
-            top.classList.toggle('rotate45');
-            middle.classList.toggle('hide');
-            bottom.classList.toggle('rotateM45');
-        })
-
-        nav_list.addEventListener('click', () => {
-            mobile_menu.click();
-        })
-    }
 
     {
         let x = 0;
@@ -411,4 +397,23 @@ function back() {
             entries[x].target.classList.add('show_content')
         }
     }
+
+
+}
+
+{
+
+    let mobile_menu = document.querySelector('.mobile_menu_toggle');
+    let mobile_nav = document.querySelector('.mobile_nav');
+    let mobile_lis = document.querySelectorAll('.mobile_li');
+    let top = mobile_menu.querySelector('.top');
+    let middle = mobile_menu.querySelector('.middle');
+    let bottom = mobile_menu.querySelector('.bottom');
+
+    mobile_menu.addEventListener('click', () => {
+        top.classList.toggle('rotate45');
+        middle.classList.toggle('hide');
+        bottom.classList.toggle('rotateM45');
+        mobile_nav.classList.toggle('mobile_nav_show');
+    })
 }
