@@ -1,5 +1,3 @@
-
-
 // 568-1080 = 512 
 // 12-20 = 8
 
@@ -9,8 +7,8 @@ function openAnimate(callback) {
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     anime.timeline({
-        loop: false,
-    })
+            loop: false,
+        })
         .add({
             targets: '.ml12 .letter',
             translateX: [40, 0],
@@ -86,28 +84,27 @@ var menu_swiper = new Swiper('.menu_swiper_container', {
     }
 });
 
+{
+    // window.setTimeout(() => {
+    //     nav.forEach(element => {
+    //         element.classList.remove('active');
+    //     });
+    //     nav[0].classList.add('active');
+    // }, 100)
 
-let nav = document.querySelectorAll('li');
-// window.setTimeout(() => {
-//     nav.forEach(element => {
-//         element.classList.remove('active');
-//     });
-//     nav[0].classList.add('active');
-// }, 100)
-
-//nav和swiper點點連動
-let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
-let nav_clickable = document.querySelectorAll('li');
-for (let i = 0; i < nav.length; i++) {
-    nav_clickable[i].addEventListener("click", () => {
-        swiperPaginationBullet[i].click();
-        nav_clickable.forEach(element => {
-            element.classList.remove('active');
-        });
-        nav_clickable[i].classList.add('active');
-    })
+    //nav和swiper點點連動
+    let swiperPaginationBullet = document.querySelectorAll('.swiper-pagination-bullet');
+    let nav_clickable = document.querySelectorAll('.pc_li');
+    for (let i = 0; i < nav_clickable.length; i++) {
+        nav_clickable[i].addEventListener("click", () => {
+            swiperPaginationBullet[i].click();
+            nav_clickable.forEach(element => {
+                element.classList.remove('active');
+            });
+            nav_clickable[i].classList.add('active');
+        })
+    }
 }
-
 
 
 
@@ -387,12 +384,10 @@ function back() {
                     x = i;
                 }
             }
-            console.log('123')
             entries[x].target.classList.add('show_title')
         }
 
-    }
-    {
+    } {
         let x = 0;
 
         let contents = document.querySelectorAll('.content');
