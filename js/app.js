@@ -415,7 +415,7 @@ function back() {
     let middle = mobile_menu.querySelector('.middle');
     let bottom = mobile_menu.querySelector('.bottom');
 
-    mobile_menu.addEventListener('touchend', () => {
+    mobile_menu.addEventListener('click', () => {
         top.classList.toggle('rotate45');
         middle.classList.toggle('hide');
         bottom.classList.toggle('rotateM45');
@@ -423,7 +423,7 @@ function back() {
     })
 
     mobile_lis.forEach(li => {
-        li.addEventListener('touchend', () => {
+        li.addEventListener('click', () => {
             top.classList.toggle('rotate45');
             middle.classList.toggle('hide');
             bottom.classList.toggle('rotateM45');
