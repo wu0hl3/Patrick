@@ -422,6 +422,13 @@ function back() {
         mobile_nav.classList.toggle('mobile_nav_show');
     })
 
+    function mobile_toggle() {
+        top.classList.toggle('rotate45');
+        middle.classList.toggle('hide');
+        bottom.classList.toggle('rotateM45');
+        mobile_nav.classList.toggle('mobile_nav_show');
+    }
+
     mobile_lis.forEach(li => {
         li.addEventListener('click', () => {
             top.classList.toggle('rotate45');
