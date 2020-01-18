@@ -408,35 +408,29 @@ function back() {
 
 {
 
-    let mobile_menu = document.querySelector('.mobile_menu_toggle');
-    let mobile_nav = document.querySelector('.mobile_nav');
-    let mobile_lis = document.querySelectorAll('.mobile_li');
-    let top = mobile_menu.querySelector('.top');
-    let middle = mobile_menu.querySelector('.middle');
-    let bottom = mobile_menu.querySelector('.bottom');
+    // let mobile_menu = document.querySelector('.mobile_menu_toggle');
+    // let mobile_nav = document.querySelector('.mobile_nav');
+    // let mobile_lis = document.querySelectorAll('.mobile_li');
+    // let top = mobile_menu.querySelector('.top');
+    // let middle = mobile_menu.querySelector('.middle');
+    // let bottom = mobile_menu.querySelector('.bottom');
 
-    mobile_menu.addEventListener('click', () => {
-        top.classList.toggle('rotate45');
-        middle.classList.toggle('hide');
-        bottom.classList.toggle('rotateM45');
-        mobile_nav.classList.toggle('mobile_nav_show');
-    })
+    // mobile_menu.addEventListener('click', () => {
+    //     top.classList.toggle('rotate45');
+    //     middle.classList.toggle('hide');
+    //     bottom.classList.toggle('rotateM45');
+    //     mobile_nav.classList.toggle('mobile_nav_show');
+    // })
 
-    function mobile_toggle() {
-        top.classList.toggle('rotate45');
-        middle.classList.toggle('hide');
-        bottom.classList.toggle('rotateM45');
-        mobile_nav.classList.toggle('mobile_nav_show');
-    }
-
-    mobile_lis.forEach(li => {
-        li.addEventListener('click', () => {
-            top.classList.toggle('rotate45');
-            middle.classList.toggle('hide');
-            bottom.classList.toggle('rotateM45');
-            mobile_nav.classList.toggle('mobile_nav_show');
-        })
-    });
+   
+    // mobile_lis.forEach(li => {
+    //     li.addEventListener('click', () => {
+    //         top.classList.toggle('rotate45');
+    //         middle.classList.toggle('hide');
+    //         bottom.classList.toggle('rotateM45');
+    //         mobile_nav.classList.toggle('mobile_nav_show');
+    //     })
+    // });
 
 }
 
@@ -468,4 +462,16 @@ function back() {
         }
     }
 
+}
+
+function mobile_toggle() {
+    let mobile_nav = document.querySelector('.mobile_nav');
+    let top = document.querySelector('.top');
+    let middle = document.querySelector('.middle');
+    let bottom = document.querySelector('.bottom'); 
+
+    top.classList.toggle('rotate45');
+    middle.classList.toggle('hide');
+    bottom.classList.toggle('rotateM45');
+    mobile_nav.classList.toggle('mobile_nav_show');
 }
