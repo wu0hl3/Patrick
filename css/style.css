@@ -2,6 +2,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  cursor: pointer;
 }
 
 @media (max-height: 952px) {
@@ -1291,6 +1292,8 @@ html {
   position: absolute;
   left: 0;
   top: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
