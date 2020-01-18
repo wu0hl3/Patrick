@@ -1,5 +1,4 @@
-// 568-1080 = 512 
-// 12-20 = 8
+AOS.init();
 
 //動畫
 function openAnimate(callback) {
@@ -233,7 +232,11 @@ function back() {
             }
         }, 5000)
     };
-    bannerEnv5s(1);
+
+    if (document.body.clientWidth > 768) {
+        bannerEnv5s(1);
+    }
+
 
     //畫面監控
     let sections = document.querySelectorAll('section');
@@ -373,7 +376,9 @@ function back() {
             entries[x].target.classList.add('show_title')
         }
 
-    } {
+    }
+
+    {
         let x = 0;
 
         let contents = document.querySelectorAll('.content');
@@ -410,10 +415,50 @@ function back() {
     let middle = mobile_menu.querySelector('.middle');
     let bottom = mobile_menu.querySelector('.bottom');
 
-    mobile_menu.addEventListener('click', () => {
+    mobile_menu.addEventListener('touchend', () => {
         top.classList.toggle('rotate45');
         middle.classList.toggle('hide');
         bottom.classList.toggle('rotateM45');
         mobile_nav.classList.toggle('mobile_nav_show');
     })
+
+    mobile_lis.forEach(li => {
+        li.addEventListener('touchend', () => {
+            top.classList.toggle('rotate45');
+            middle.classList.toggle('hide');
+            bottom.classList.toggle('rotateM45');
+            mobile_nav.classList.toggle('mobile_nav_show');
+        })
+    });
+
+}
+
+{
+    let triggers = document.querySelectorAll('.trigger');
+    let nav_index = document.querySelector('.nav_index');
+    let initial = true;
+
+    const options = {
+        threshold: .7,
+    }
+
+    let index_observer = new IntersectionObserver(indexCheck, options);
+
+
+    triggers.forEach(content => {
+        index_observer.observe(content);
+    })
+
+    function indexCheck(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting == true) {
+                nav_index.innerHTML = entry.target.dataset.mobileindex;
+            }
+        });
+        if (initial) {
+            nav_index.innerHTML = "Brand";
+            initial = false;
+        }
+    }
+
 }

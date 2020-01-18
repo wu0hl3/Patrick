@@ -46,7 +46,6 @@ html {
 }
 
 .animation {
-  display: none;
   position: absolute;
   top: 0%;
   left: 0;
@@ -1337,6 +1336,7 @@ html {
   width: 100%;
   height: calc(100% - 50px);
   position: fixed;
+  z-index: 1000;
   left: 0;
   top: 50px;
   opacity: 0;
@@ -1383,6 +1383,9 @@ html {
 .mobile header .mobile_nav .mobile_nav_list .mobile_li svg {
   width: 50px;
   height: 50px;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  margin-right: 5px;
 }
 
 .mobile header .mobile_nav .mobile_nav_list .mobile_li svg path,
@@ -1403,6 +1406,7 @@ html {
 
 .mobile header .mobile_nav_show {
   opacity: 1;
+  pointer-events: all;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1422,8 +1426,7 @@ html {
 
 .mobile main .mobile_section {
   width: 100%;
-  background-attachment: fixed;
-  background-position: center;
+  position: relative;
 }
 
 .mobile main .mobile_section .mobile_section_container {
@@ -1464,16 +1467,23 @@ html {
 }
 
 .mobile #mobile_brand {
-  background-image: url(../image/banner/banner1.jpg);
-  background-size: cover;
-}
-
-.mobile #mobile_brand .mobile_section_container {
   background: rgba(0, 0, 0, 0.8);
 }
 
 .mobile #mobile_brand .content_mobile {
   margin-top: 50px;
+}
+
+.mobile #mobile_brand::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../image/banner/banner1.jpg");
+  background-size: cover;
 }
 
 .mobile #mobile_menu .mobile_section_container {
@@ -1560,7 +1570,7 @@ html {
 }
 
 .mobile #mobile_environment {
-  background: #020202;
+  background: #080707;
 }
 
 .mobile #mobile_environment .mobile_section_container {
@@ -1577,14 +1587,42 @@ html {
 
 .mobile #mobile_environment .mobile_section_container .content_mobile .mobile_environment_swiper_container {
   overflow: hidden;
+  min-height: 500px;
   width: 100%;
 }
 
 .mobile #mobile_environment .mobile_section_container .content_mobile .mobile_environment_swiper_container .mobile_environment_wrapper .mobile_environment_swiper_slide {
+  position: relative;
   background-position: center;
   background-size: cover;
   width: 320px;
   height: 240px;
+}
+
+.mobile #mobile_environment .mobile_section_container .content_mobile .mobile_environment_swiper_container .mobile_environment_wrapper .mobile_environment_swiper_slide::after {
+  content: '';
+  background-image: inherit;
+  background-position: bottom;
+  background-size: cover;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  width: inherit;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  bottom: -60%;
+  opacity: .4;
+}
+
+.mobile #mobile_environment .mobile_section_container .content_mobile .mobile_environment_swiper_container .mobile_environment_wrapper .mobile_environment_swiper_slide::before {
+  z-index: 1;
+  content: '';
+  width: inherit;
+  height: 60%;
+  position: absolute;
+  bottom: -60%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 7, 7, 0.5)), to(#080707));
+  background: linear-gradient(to bottom, rgba(8, 7, 7, 0.5), #080707);
 }
 
 .mobile #mobile_environment .swiper-pagination-bullet-active {
@@ -1592,14 +1630,21 @@ html {
 }
 
 .mobile #mobile_chef {
-  background-image: url(../image/chef/chef.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#080707), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to bottom, #080707, rgba(0, 0, 0, 0.8));
 }
 
-.mobile #mobile_chef .mobile_section_container {
-  background: rgba(0, 0, 0, 0.7);
+.mobile #mobile_chef::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
 }
 
 .mobile #mobile_chef .mobile_section_container h3 {
@@ -1626,12 +1671,8 @@ html {
 }
 
 .mobile #mobile_news {
-  background-image: url(../image/banner/banner4.webp);
-  background-attachment: fixed;
-}
-
-.mobile #mobile_news .mobile_section_container {
-  background: rgba(0, 0, 0, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
 }
 
 .mobile #mobile_news .mobile_section_container .content_mobile {
@@ -1677,11 +1718,6 @@ html {
 }
 
 .mobile #mobile_contactUs {
-  background-image: url(../image/banner/banner10.jpg);
-  background-size: cover;
-}
-
-.mobile #mobile_contactUs .mobile_section_container {
   background: rgba(0, 0, 0, 0.7);
 }
 
