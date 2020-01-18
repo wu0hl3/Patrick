@@ -1291,6 +1291,7 @@ html {
   position: absolute;
   left: 0;
   top: 0;
+  cursor: pointer;
 }
 
 .mobile header .mobile_menu_toggle div {
