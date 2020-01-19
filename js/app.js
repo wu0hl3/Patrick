@@ -1,6 +1,10 @@
 AOS.init();
 
 //動畫
+window.onload = () =>{
+    openAnimate(hideAnimate);
+};
+
 function openAnimate(callback) {
     var textWrapper = document.querySelector('.ml12');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -33,7 +37,7 @@ function hideAnimate() {
         animation.classList.add('animation_hide');
     }, 1000)
 }
-openAnimate(hideAnimate);
+
 
 
 //初始化swiper
@@ -422,7 +426,7 @@ function back() {
     //     mobile_nav.classList.toggle('mobile_nav_show');
     // })
 
-   
+
     // mobile_lis.forEach(li => {
     //     li.addEventListener('click', () => {
     //         top.classList.toggle('rotate45');
@@ -468,7 +472,7 @@ function mobile_toggle() {
     let mobile_nav = document.querySelector('.mobile_nav');
     let top = document.querySelector('.top');
     let middle = document.querySelector('.middle');
-    let bottom = document.querySelector('.bottom'); 
+    let bottom = document.querySelector('.bottom');
 
     top.classList.toggle('rotate45');
     middle.classList.toggle('hide');

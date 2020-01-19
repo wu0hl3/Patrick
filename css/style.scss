@@ -4,7 +4,7 @@ $wineRed: #310c0e;
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	cursor:pointer ;
+
 
 	@media (max-height:952px) {
 		font-size: 56.25%;
@@ -12,6 +12,10 @@ html {
 
 	@media (max-height:824px) {
 		font-size: 50%;
+	}
+
+	@media (max-width:768px) {
+		cursor: pointer;
 	}
 
 	@media (max-height:696px) {
@@ -46,11 +50,11 @@ html {
 	top: 0%;
 	left: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 999;
 	text-align: center;
 	background: $wineRed;
 	overflow: hidden;
-	transition: 3s;
+	transition: 5s 3s;
 
 	h1 {
 		font-family: 'Noto Sans TC', sans-serif;
@@ -256,8 +260,9 @@ html {
 		#logo {
 			width: 100%;
 			height: 32%;
+
 			@media (max-width:1023px) {
-				display:none;
+				display: none;
 			}
 		}
 
@@ -1157,7 +1162,8 @@ html {
 			top: 0;
 			border: none;
 			background: transparent;
-			cursor :pointer;
+			cursor: pointer;
+
 			div {
 				width: 24px;
 				height: 2px;
@@ -1215,7 +1221,7 @@ html {
 			transform: translateY(-20%);
 			pointer-events: none;
 			transition: 1s;
-			
+
 			.mobile_nav_list {
 				width: 100%;
 				height: 100%;
@@ -1233,7 +1239,7 @@ html {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					cursor :pointer;
+					cursor: pointer;
 
 					svg {
 						width: 50px;
@@ -1427,8 +1433,8 @@ html {
 	}
 
 	#mobile_environment {
-		background:rgb(8, 7, 7);
-		
+		background: rgb(8, 7, 7);
+
 		.mobile_section_container {
 			width: 100%;
 			height: 100%;
@@ -1489,7 +1495,7 @@ html {
 
 	#mobile_chef {
 		background: linear-gradient(to bottom, rgb(8, 7, 7), rgba(0, 0, 0, 0.8));
-		
+
 
 		&::after {
 			content: '';
@@ -1549,7 +1555,8 @@ html {
 							background-size: cover;
 							border: 1px solid $gold;
 							width: 300px;
-							height: 300px;
+							height: auto;
+							min-height: 300px;
 							border-radius: 10px;
 
 							.time {
@@ -1575,6 +1582,9 @@ html {
 								font-family: '微軟正黑體';
 							}
 						}
+					}
+					.swiper-pagination-bullet-active{
+						background: $gold;
 					}
 				}
 			}

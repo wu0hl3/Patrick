@@ -2,7 +2,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  cursor: pointer;
 }
 
 @media (max-height: 952px) {
@@ -14,6 +13,12 @@ html {
 @media (max-height: 824px) {
   html {
     font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    cursor: pointer;
   }
 }
 
@@ -51,12 +56,12 @@ html {
   top: 0%;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 999;
   text-align: center;
   background: #310c0e;
   overflow: hidden;
-  -webkit-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 5s 3s;
+  transition: 5s 3s;
 }
 
 .animation h1 {
@@ -1701,7 +1706,8 @@ html {
   background-size: cover;
   border: 1px solid #816e4a;
   width: 300px;
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   border-radius: 10px;
 }
 
@@ -1726,6 +1732,10 @@ html {
   margin: auto;
   text-align: center;
   font-family: '微軟正黑體';
+}
+
+.mobile #mobile_news .mobile_section_container .content_mobile .mobile_news_swiper_container .swiper-pagination-bullet-active {
+  background: #816e4a;
 }
 
 .mobile #mobile_contactUs {
