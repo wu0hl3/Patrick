@@ -2,7 +2,15 @@ AOS.init();
 
 //動畫
 window.onload = () => {
-    openAnimate();
+    if (document.body.clientWidth > 1023) {
+        openAnimate();
+    } else if (document.body.clientWidth > 769) {
+        openAnimate1023to769()
+    } else {
+        openAnimateMobile();
+    }
+
+
 };
 
 function openAnimate() {
@@ -18,12 +26,8 @@ function openAnimate() {
     let width = coods.width;
     let top = coods.top;
     let left = coods.left;
-    console.log(height);
-    console.log(width);
-    console.log(top);
-    console.log(left);
 
-
+    animationLogo.style.width = width;
 
     anime.timeline({
             loop: false,
@@ -47,22 +51,17 @@ function openAnimate() {
             targets: '.animationLogo',
             opacity: [0, 1],
             easing: "easeOutExpo",
-        }).add({
-            targets: '.animationLogo',
-            easing: "easeOutExpo",
-            width: width,
-            opacity:1,
-            translateX: "-50%",
-            translateY:"-50%",
             duration: 3000,
         }).add({
             targets: '.animationLogo',
             easing: "easeOutExpo",
             top: top,
             left: left,
-            width: width,
-            translateX: 0,
-            translateY:0,
+            scale: ['1.5', '1'],
+            translateX: ['-25%', '0'],
+            translateY: ['-25%', '0'],
+            // translateX: 0,
+            // translateY: 0,
             duration: 3000,
         })
         .add({
@@ -73,13 +72,102 @@ function openAnimate() {
         })
 }
 
-// function hideAnimate() {
-//     let animation = document.querySelector('.animation');
-//     window.setTimeout(() => {
-//         animation.classList.add('animation_hide');
-//     }, 1000)
-// }
+function openAnimate1023to769() {
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    const animation = document.querySelector('.animation');
+    const animationLogo = document.querySelector('.animationLogo');
 
+    animationLogo.style.width = '300px';
+
+    anime.timeline({
+            loop: false,
+        })
+        .add({
+            targets: '.ml12 .letter',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1300,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml12 .letter',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        }).add({
+            targets: '.animationLogo',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 3000,
+        })
+        .add({
+            targets: '.animation',
+            opacity: [1, 0],
+            easing: "easeOutExpo",
+            // duration: 5000,
+        })
+}
+
+function openAnimateMobile() {
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    const animation = document.querySelector('.animation');
+    const animationLogo = document.querySelector('.animationLogo');
+    //target
+    const nav_index = document.querySelector('.nav_index');
+    const coods = nav_index.getBoundingClientRect();
+
+    let height = coods.height;
+    let width = coods.width;
+    let top = coods.top;
+    let left = coods.left;
+
+    animationLogo.style.width = width;
+
+    anime.timeline({
+            loop: false,
+        })
+        .add({
+            targets: '.ml12 .letter',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1300,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml12 .letter',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        }).add({
+            targets: '.animationLogo',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+        }).add({
+            targets: '.animationLogo',
+            easing: "easeOutExpo",
+            top: top,
+            left: left,
+            scale: ['1.5', '1'],
+            translateX: ['-25%', '0'],
+            translateY: ['-25%', '0'],
+            duration: 3000,
+        })
+        .add({
+            targets: '.animation',
+            opacity: [1, 0],
+            easing: "easeOutExpo",
+            // duration: 5000,
+        })
+}
 
 
 //初始化swiper
@@ -503,7 +591,7 @@ function back() {
             }
         });
         if (initial) {
-            nav_index.innerHTML = "Brand";
+            nav_index.innerHTML = "L'Atelier de Patrick";
             initial = false;
         }
     }

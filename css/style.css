@@ -62,8 +62,9 @@ html {
   overflow: hidden;
   pointer-events: none;
   opacity: 1;
-  -webkit-transition: 3s;
-  transition: 3s;
+  background-color: #0d0c08;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .animation h1 {
@@ -103,6 +104,7 @@ html {
   top: 50%;
   left: 50%;
   z-index: 1001;
+  width: 300px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
@@ -111,6 +113,23 @@ html {
 
 .animation svg path {
   fill: white;
+}
+
+.animation svg text {
+  fill: white;
+}
+
+.animation svg .cls-2 {
+  font-size: 20px;
+}
+
+.animation svg .cls-11 {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.animation svg .cls-12 {
+  font-size: 30px;
 }
 
 .animation_hide {
@@ -318,6 +337,23 @@ html {
 
 #all_pc header #logo svg path {
   fill: white;
+}
+
+#all_pc header #logo svg text {
+  fill: white;
+}
+
+#all_pc header #logo svg .cls-2 {
+  font-size: 20px;
+}
+
+#all_pc header #logo svg .cls-11 {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+#all_pc header #logo svg .cls-12 {
+  font-size: 30px;
 }
 
 @media (max-width: 1023px) {
@@ -1330,6 +1366,7 @@ html {
   left: 0;
   z-index: 10;
   background-color: #310c0e;
+  text-align: center;
 }
 
 .mobile header .mobile_menu_toggle {
@@ -1463,6 +1500,7 @@ html {
 }
 
 .mobile header .nav_index {
+  display: inline;
   color: white;
   text-align: center;
   font-size: 35px;

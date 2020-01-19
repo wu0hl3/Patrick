@@ -56,8 +56,9 @@ html {
 	overflow: hidden;
 	pointer-events: none;
 	opacity: 1;
+	background-color: #0d0c08;
 
-	transition: 3s ;
+	transition: 1s ;
 
 	h1 {
 		font-family: 'Noto Sans TC', sans-serif;
@@ -101,6 +102,20 @@ html {
 		// transition: 1s;
 		path{
 			fill: white;
+		}
+		text{
+			fill: white;
+		}
+		.cls-2{
+			font-size: 20px;
+			
+		}
+		.cls-11{
+			font-size: 20px;
+			margin-right: 5px;
+		}
+		.cls-12{
+			font-size: 30px;
 		}
 	}
 }
@@ -290,6 +305,20 @@ html {
 				height: auto;
 				path{
 					fill: white;
+				}
+				text{
+					fill: white;
+				}
+				.cls-2{
+					font-size: 20px;
+					
+				}
+				.cls-11{
+					font-size: 20px;
+					margin-right: 5px;
+				}
+				.cls-12{
+					font-size: 30px;
 				}
 			}
 	
@@ -1187,6 +1216,7 @@ html {
 		left: 0;
 		z-index: 10;
 		background-color: $wineRed;
+		text-align: center;
 
 		.mobile_menu_toggle {
 			width: 50px;
@@ -1310,6 +1340,7 @@ html {
 		}
 
 		.nav_index {
+			display: inline;
 			color: white;
 			text-align: center;
 			font-size: 35px;
