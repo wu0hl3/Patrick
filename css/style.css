@@ -60,8 +60,10 @@ html {
   text-align: center;
   background: #310c0e;
   overflow: hidden;
-  -webkit-transition: 5s 3s;
-  transition: 5s 3s;
+  pointer-events: none;
+  opacity: 1;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 .animation h1 {
@@ -94,6 +96,21 @@ html {
   .animation h1 {
     font-size: 30px;
   }
+}
+
+.animation svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1001;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animation svg path {
+  fill: white;
 }
 
 .animation_hide {
@@ -283,6 +300,24 @@ html {
 #all_pc header #logo {
   width: 100%;
   height: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#all_pc header #logo svg {
+  width: 90%;
+  height: auto;
+}
+
+#all_pc header #logo svg path {
+  fill: white;
 }
 
 @media (max-width: 1023px) {

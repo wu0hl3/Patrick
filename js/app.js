@@ -1,13 +1,29 @@
 AOS.init();
 
 //動畫
-window.onload = () =>{
-    openAnimate(hideAnimate);
+window.onload = () => {
+    openAnimate();
 };
 
-function openAnimate(callback) {
+function openAnimate() {
     var textWrapper = document.querySelector('.ml12');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    const animation = document.querySelector('.animation');
+    const animationLogo = document.querySelector('.animationLogo');
+    //target
+    const logo_header = document.querySelector('.logo_header');
+    const coods = logo_header.getBoundingClientRect();
+
+    let height = coods.height;
+    let width = coods.width;
+    let top = coods.top;
+    let left = coods.left;
+    console.log(height);
+    console.log(width);
+    console.log(top);
+    console.log(left);
+
+
 
     anime.timeline({
             loop: false,
@@ -27,16 +43,42 @@ function openAnimate(callback) {
             easing: "easeInExpo",
             duration: 1200,
             delay: (el, i) => 100 + 30 * i
-        });
-    callback();
+        }).add({
+            targets: '.animationLogo',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+        }).add({
+            targets: '.animationLogo',
+            easing: "easeOutExpo",
+            width: width,
+            opacity:1,
+            translateX: "-50%",
+            translateY:"-50%",
+            duration: 3000,
+        }).add({
+            targets: '.animationLogo',
+            easing: "easeOutExpo",
+            top: top,
+            left: left,
+            width: width,
+            translateX: 0,
+            translateY:0,
+            duration: 3000,
+        })
+        .add({
+            targets: '.animation',
+            opacity: [1, 0],
+            easing: "easeOutExpo",
+            // duration: 5000,
+        })
 }
 
-function hideAnimate() {
-    let animation = document.querySelector('.animation');
-    window.setTimeout(() => {
-        animation.classList.add('animation_hide');
-    }, 1000)
-}
+// function hideAnimate() {
+//     let animation = document.querySelector('.animation');
+//     window.setTimeout(() => {
+//         animation.classList.add('animation_hide');
+//     }, 1000)
+// }
 
 
 
