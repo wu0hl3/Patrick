@@ -100,7 +100,7 @@ function openAnimate() {
             opacity: [0, 1],
             easing: "easeOutQuart",
             delay: 1000,
-            duration: 3000,
+            duration: 2000,
         }).add({
             targets: '.animationLogo',
             easing: "easeOutQuart",
@@ -128,7 +128,7 @@ function openAnimate() {
             top: [coods2[1][3], coods2[1][3]],
             left: [coods2[1][4], coods2[1][4]],
             easing: "easeOutExpo",
-            delay: 600,
+            delay: 400,
             duration: 1000,
         }).add({
             targets: '.ani_3',
@@ -137,7 +137,7 @@ function openAnimate() {
             top: [coods2[2][3], coods2[2][3]],
             left: [coods2[2][4], coods2[2][4]],
             easing: "easeOutExpo",
-            delay: 800,
+            delay: 400,
             duration: 800,
         }).add({
             targets: '.ani_4',
@@ -164,21 +164,21 @@ function openAnimate() {
             top: [coods2[5][3], coods2[5][3]],
             left: [coods2[5][4], coods2[5][4]],
             easing: "easeOutExpo",
-            delay: 200,
+            delay: 600,
             duration: 500,
         })
         .add({
             targets: '.ani_1',
             color: ['rgba(255, 255, 255)', 'rgba(255, 166, 0)'],
             easing: "easeOutExpo",
-            delay: 200,
+            delay: 50,
             // duration: 500,
         })
         .add({
             targets: '.animation',
             opacity: [1, 0],
             easing: "easeInQuart",
-            delay: 500,
+            delay: 800,
             duration: 3000,
         })
 }

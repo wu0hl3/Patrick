@@ -132,8 +132,8 @@ html {
 .animation p {
   position: absolute;
   color: white;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color .5s;
+  transition: color .5s;
 }
 
 .animation_hide {
