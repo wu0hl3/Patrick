@@ -37,12 +37,12 @@ function openAnimate() {
 
         nav.push(element.children[1]);
     });
-    console.log(nav[0]);
-    console.log(nav[1]);
-    console.log(nav[2]);
-    console.log(nav[3]);
-    console.log(nav[4]);
-    console.log(nav[5]);
+    // console.log(nav[0]);
+    // console.log(nav[1]);
+    // console.log(nav[2]);
+    // console.log(nav[3]);
+    // console.log(nav[4]);
+    // console.log(nav[5]);
 
     // nav.forEach(element => {
     //     console.log(element.getBoundingClientRect().width);
@@ -192,35 +192,40 @@ function openAnimate1023to769() {
     animationLogo.style.width = '300px';
 
     anime.timeline({
-            loop: false,
-        })
-        .add({
-            targets: '.ml12 .letter',
-            translateX: [40, 0],
-            translateZ: 0,
-            opacity: [0, 1],
-            easing: "easeOutExpo",
-            duration: 1300,
-            delay: (el, i) => 500 + 30 * i
-        }).add({
-            targets: '.ml12 .letter',
-            translateX: [0, -30],
-            opacity: [1, 0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        }).add({
-            targets: '.animationLogo',
-            opacity: [0, 1],
-            easing: "easeOutExpo",
-            duration: 3000,
-        })
-        .add({
-            targets: '.animation',
-            opacity: [1, 0],
-            easing: "easeOutExpo",
-            // duration: 5000,
-        })
+        loop: false,
+    })
+    .add({
+        targets: '.ml12 .letter',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1300,
+        delay: (el, i) => 500 + 30 * i
+    }).add({
+        targets: '.ml12 .letter',
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: (el, i) => 100 + 30 * i
+    }).add({
+        targets: '.animationLogo',
+        opacity: [0, 1],
+        easing: "easeOutQuart",
+        duration: 1500,
+    }).add({
+        targets: '.animationLogo',
+        opacity: [1, 0],
+        easing: "easeInBack",
+        duration: 1800,
+    }).add({
+        targets: '.animation',
+        opacity: [1, 0],
+        easing: "easeInQuart",
+        delay: 500,
+        duration: 3000,
+    })
 }
 
 function openAnimateMobile() {
@@ -260,23 +265,19 @@ function openAnimateMobile() {
         }).add({
             targets: '.animationLogo',
             opacity: [0, 1],
-            easing: "easeOutExpo",
+            easing: "easeOutQuart",
             duration: 1500,
         }).add({
             targets: '.animationLogo',
-            easing: "easeOutExpo",
-            top: top,
-            left: left,
-            scale: ['1.5', '1'],
-            translateX: ['-25%', '0'],
-            translateY: ['-25%', '0'],
-            duration: 3000,
-        })
-        .add({
+            opacity: [1, 0],
+            easing: "easeInBack",
+            duration: 1800,
+        }).add({
             targets: '.animation',
             opacity: [1, 0],
-            easing: "easeOutExpo",
-            // duration: 5000,
+            easing: "easeInQuart",
+            delay: 500,
+            duration: 3000,
         })
 }
 
