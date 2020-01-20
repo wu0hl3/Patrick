@@ -85,6 +85,18 @@ html {
 			font-size: 30px;
 		}
 	}
+	.copyright{
+		font-family: "Reenie Beanie", "微軟正黑體";
+		// font-family: 'Noto Sans TC', sans-serif;
+		color: white;
+		line-height: unset;
+		white-space: nowrap;
+		font-size: 7rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
 
 	svg {
 		position: absolute;

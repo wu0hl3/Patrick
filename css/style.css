@@ -97,6 +97,19 @@ html {
   }
 }
 
+.animation .copyright {
+  font-family: "Reenie Beanie", "微軟正黑體";
+  color: white;
+  line-height: unset;
+  white-space: nowrap;
+  font-size: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .animation svg {
   position: absolute;
   top: 50%;

@@ -86,12 +86,12 @@ function openAnimate() {
             duration: 1200,
             delay: (el, i) => 100 + 30 * i
         }).add({
-            targets: '.animationLogo',
+            targets: '.copyright',
             opacity: [0, 1],
             easing: "easeOutQuart",
             duration: 1500,
         }).add({
-            targets: '.animationLogo',
+            targets: '.copyright',
             opacity: [1, 0],
             easing: "easeInBack",
             duration: 1800,
@@ -210,6 +210,22 @@ function openAnimate1023to769() {
         duration: 1200,
         delay: (el, i) => 100 + 30 * i
     }).add({
+        targets: '.copyright',
+        opacity: [0, 1],
+        easing: "easeOutQuart",
+        duration: 1500,
+    }).add({
+        targets: '.copyright',
+        opacity: [1, 0],
+        easing: "easeInBack",
+        duration: 1800,
+    }).add({
+        targets: '.animationLogo',
+        opacity: [0, 1],
+        easing: "easeOutQuart",
+        delay: 1000,
+        duration: 2000,
+    }).add({
         targets: '.animationLogo',
         opacity: [0, 1],
         easing: "easeOutQuart",
@@ -262,6 +278,22 @@ function openAnimateMobile() {
             easing: "easeInExpo",
             duration: 1200,
             delay: (el, i) => 100 + 30 * i
+        }).add({
+            targets: '.copyright',
+            opacity: [0, 1],
+            easing: "easeOutQuart",
+            duration: 1500,
+        }).add({
+            targets: '.copyright',
+            opacity: [1, 0],
+            easing: "easeInBack",
+            duration: 1800,
+        }).add({
+            targets: '.animationLogo',
+            opacity: [0, 1],
+            easing: "easeOutQuart",
+            delay: 1000,
+            duration: 2000,
         }).add({
             targets: '.animationLogo',
             opacity: [0, 1],
