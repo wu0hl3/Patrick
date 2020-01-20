@@ -177,9 +177,9 @@ function openAnimate() {
         .add({
             targets: '.animation',
             opacity: [1, 0],
-            easing: "easeOutExpo",
-            delay: 800,
-            // duration: 3000,
+            easing: "easeInQuart",
+            delay: 500,
+            duration: 3000,
         })
 }
 

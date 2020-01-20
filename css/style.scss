@@ -58,7 +58,7 @@ html {
 	opacity: 1;
 	background-color: #0d0c08;
 
-	transition: 1s ;
+	// transition: 1s;
 
 	h1 {
 		font-family: 'Noto Sans TC', sans-serif;
@@ -86,39 +86,45 @@ html {
 		}
 	}
 
-	svg{
+	svg {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		// width: 60%;
 		// height: auto;
 		z-index: 1001;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 		opacity: 0;
 		// width: 407px;
 		// top:111px;
 		// left: 22px;
 		pointer-events: none;
+
 		// transition: 1s;
-		path{
+		path {
 			fill: white;
 		}
-		text{
+
+		text {
 			fill: white;
 		}
-		.cls-2{
+
+		.cls-2 {
 			font-size: 20px;
-			
+
 		}
-		.cls-11{
+
+		.cls-11 {
 			font-size: 20px;
 			margin-right: 5px;
 		}
-		.cls-12{
+
+		.cls-12 {
 			font-size: 30px;
 		}
 	}
-	p{
+
+	p {
 		position: absolute;
 		color: white;
 		transition: color 1s;
@@ -306,29 +312,35 @@ html {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			svg{
+
+			svg {
 				width: 70%;
 				height: auto;
-				path{
+
+				path {
 					fill: white;
 				}
-				text{
+
+				text {
 					fill: white;
 				}
-				.cls-2{
+
+				.cls-2 {
 					font-size: 20px;
-					
+
 				}
-				.cls-11{
+
+				.cls-11 {
 					font-size: 20px;
 					margin-right: 5px;
 				}
-				.cls-12{
+
+				.cls-12 {
 					font-size: 30px;
 				}
 			}
-	
-			
+
+
 
 			@media (max-width:1023px) {
 				display: none;
@@ -1559,6 +1571,10 @@ html {
 			}
 		}
 
+		.swiper-pagination-bullets {
+			bottom: 120px;
+		}
+
 		.swiper-pagination-bullet-active {
 			background: $gold
 		}
@@ -1654,7 +1670,8 @@ html {
 							}
 						}
 					}
-					.swiper-pagination-bullet-active{
+
+					.swiper-pagination-bullet-active {
 						background: $gold;
 					}
 				}

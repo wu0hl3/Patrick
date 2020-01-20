@@ -63,8 +63,6 @@ html {
   pointer-events: none;
   opacity: 1;
   background-color: #0d0c08;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .animation h1 {
@@ -1718,6 +1716,10 @@ html {
   bottom: -60%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 7, 7, 0.5)), to(#080707));
   background: linear-gradient(to bottom, rgba(8, 7, 7, 0.5), #080707);
+}
+
+.mobile #mobile_environment .swiper-pagination-bullets {
+  bottom: 120px;
 }
 
 .mobile #mobile_environment .swiper-pagination-bullet-active {
