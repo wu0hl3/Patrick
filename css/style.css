@@ -104,7 +104,6 @@ html {
   top: 50%;
   left: 50%;
   z-index: 1001;
-  width: 300px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
@@ -130,6 +129,13 @@ html {
 
 .animation svg .cls-12 {
   font-size: 30px;
+}
+
+.animation p {
+  position: absolute;
+  color: white;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 .animation_hide {
@@ -331,7 +337,7 @@ html {
 }
 
 #all_pc header #logo svg {
-  width: 90%;
+  width: 70%;
   height: auto;
 }
 

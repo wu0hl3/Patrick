@@ -118,6 +118,12 @@ html {
 			font-size: 30px;
 		}
 	}
+	p{
+		position: absolute;
+		color: white;
+		transition: color 1s;
+		// color: rgba(255, 166, 0);
+	}
 }
 
 .animation_hide {
@@ -301,7 +307,7 @@ html {
 			justify-content: center;
 			align-items: center;
 			svg{
-				width: 90%;
+				width: 70%;
 				height: auto;
 				path{
 					fill: white;

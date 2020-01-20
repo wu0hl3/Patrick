@@ -29,6 +29,44 @@ function openAnimate() {
 
     animationLogo.style.width = width;
 
+
+    //nav test
+    let nav = [];
+    const pc_lis = document.querySelectorAll('.pc_li');
+    pc_lis.forEach(element => {
+
+        nav.push(element.children[1]);
+    });
+    console.log(nav[0]);
+    console.log(nav[1]);
+    console.log(nav[2]);
+    console.log(nav[3]);
+    console.log(nav[4]);
+    console.log(nav[5]);
+
+    // nav.forEach(element => {
+    //     console.log(element.getBoundingClientRect().width);
+    // });
+    const coods2 = nav.map((item, index, array) => {
+        let tmp = item.getBoundingClientRect();
+        return [window.getComputedStyle(item).fontSize, tmp.width, tmp.height, tmp.top, tmp.left]
+    });
+    // console.log(coods2)
+
+    // for (let i = 0; i < nav.length; i++) {
+
+    //     nav[i].style.fontSize = `${coods2[i][0]}px`;
+    //     nav[i].style.width = coods2[i][1];
+    //     nav[i].style.height = coods2[i][2];
+    //     nav[i].style.top = `${coods2[i][3]}px`;
+    //     nav[i].style.left = `${coods2[i][4]}px`;
+
+    // }
+
+
+
+
+
     anime.timeline({
             loop: false,
         })
@@ -50,25 +88,98 @@ function openAnimate() {
         }).add({
             targets: '.animationLogo',
             opacity: [0, 1],
-            easing: "easeOutExpo",
+            easing: "easeOutQuart",
+            duration: 1500,
+        }).add({
+            targets: '.animationLogo',
+            opacity: [1, 0],
+            easing: "easeInBack",
+            duration: 1800,
+        }).add({
+            targets: '.animationLogo',
+            opacity: [0, 1],
+            easing: "easeOutQuart",
+            delay: 1000,
             duration: 3000,
         }).add({
             targets: '.animationLogo',
-            easing: "easeOutExpo",
+            easing: "easeOutQuart",
             top: top,
             left: left,
-            scale: ['1.5', '1'],
+            scale: ['2', '1'],
             translateX: ['-25%', '0'],
             translateY: ['-25%', '0'],
-            // translateX: 0,
-            // translateY: 0,
             duration: 3000,
+        })
+        .add({
+            targets: '.ani_1',
+            opacity: [0, 1],
+            color: ['white', 'white'],
+            fontSize: [coods2[0][0], coods2[0][0]],
+            top: [coods2[0][3], coods2[0][3]],
+            left: [coods2[0][4], coods2[0][4]],
+            easing: "easeOutExpo",
+            delay: 1000,
+            duration: 1200,
+        }).add({
+            targets: '.ani_2',
+            opacity: [0, 1],
+            fontSize: [coods2[1][0], coods2[1][0]],
+            top: [coods2[1][3], coods2[1][3]],
+            left: [coods2[1][4], coods2[1][4]],
+            easing: "easeOutExpo",
+            delay: 600,
+            duration: 1000,
+        }).add({
+            targets: '.ani_3',
+            opacity: [0, 1],
+            fontSize: [coods2[2][0], coods2[2][0]],
+            top: [coods2[2][3], coods2[2][3]],
+            left: [coods2[2][4], coods2[2][4]],
+            easing: "easeOutExpo",
+            delay: 800,
+            duration: 800,
+        }).add({
+            targets: '.ani_4',
+            opacity: [0, 1],
+            fontSize: [coods2[3][0], coods2[3][0]],
+            top: [coods2[3][3], coods2[3][3]],
+            left: [coods2[3][4], coods2[3][4]],
+            easing: "easeOutExpo",
+            delay: 600,
+            duration: 700,
+        }).add({
+            targets: '.ani_5',
+            opacity: [0, 1],
+            fontSize: [coods2[4][0], coods2[4][0]],
+            top: [coods2[4][3], coods2[4][3]],
+            left: [coods2[4][4], coods2[4][4]],
+            easing: "easeOutExpo",
+            delay: 400,
+            duration: 600,
+        }).add({
+            targets: '.ani_6',
+            opacity: [0, 1],
+            fontSize: [coods2[5][0], coods2[5][0]],
+            top: [coods2[5][3], coods2[5][3]],
+            left: [coods2[5][4], coods2[5][4]],
+            easing: "easeOutExpo",
+            delay: 200,
+            duration: 500,
+        })
+        .add({
+            targets: '.ani_1',
+            color: ['rgba(255, 255, 255)', 'rgba(255, 166, 0)'],
+            easing: "easeOutExpo",
+            delay: 200,
+            // duration: 500,
         })
         .add({
             targets: '.animation',
             opacity: [1, 0],
             easing: "easeOutExpo",
-            // duration: 5000,
+            delay: 800,
+            // duration: 3000,
         })
 }
 
