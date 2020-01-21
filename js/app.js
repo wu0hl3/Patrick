@@ -342,7 +342,7 @@ var banner_sections = new Swiper('.banner_swiper_container', {
     effect: 'fade',
     loop: true,
     autoplay: {
-        delay: 2500,
+        delay: 5900,
         disableOnInteraction: false,
     }
 });
